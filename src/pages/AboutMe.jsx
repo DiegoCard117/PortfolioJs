@@ -65,9 +65,9 @@ export function AboutMe() {
           </div>
           <div className='menu-footer'>
             <ul>
-              <li>Home</li>
-              <li>About Me</li>
-              <li>Works</li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">AboutMe</a></li>
+              <li><a href="#works">Works</a></li>
             </ul>
           </div>
           <div className='bottom_home final-menu'>
