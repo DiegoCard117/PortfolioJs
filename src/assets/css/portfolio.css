@@ -47,15 +47,16 @@
 }
 
 .carrousel {
-  height: 500px;
-  border-bottom: 1px solid white;
+  margin-top: 20px;
+  height: 400px;
+
 }
 
 .item-carrousel {
   position: relative;
   margin: 0 auto;
   width: 95%;
-  height: 370px;
+  height: 380px;
 
   border-radius: 15px;
   background: #2D2C59;
@@ -80,7 +81,7 @@
 
 .carrousel-p {
   position: absolute;
-  bottom: 1px;
+  bottom: 15px;
   text-align: center;
 }
 
@@ -110,8 +111,60 @@
 
 .smartphone {
   z-index: 99;
+  filter: drop-shadow(0 0 0.75rem #725ef273);
 }
 
 .notebook {
   z-index: 98;
+  filter: drop-shadow(0 0 0.75rem #725ef273);
+}
+
+.btn_portfolio_container {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.btn_check {
+  text-align: center;
+  display: block;
+  margin: 5px auto;
+
+  border-radius: 10px;
+  background: #725EF2;
+  height: 32px;
+  font-size: 16px;
+  border: none;
+
+  text-decoration: none;
+  color: #FFF;
+  padding-top: 5px;
+}
+
+.btn_check:hover  {
+  background: #FFF;
+  color: #725EF2;
+  transition: 0.7s ease;
+}
+
+.btn_open , .btn_close {
+  position: relative;
+}
+
+.btn_open {
+  right: 20px;
+}
+
+.btn_close {
+  float: right;
+  left: 20px;
+}
+
+.disable {
+  filter: grayscale(0.9);
+  width: 110%;
+  padding-bottom: 5px;
+}
+
+.disable:hover {
+  background-color: grey;
 }
