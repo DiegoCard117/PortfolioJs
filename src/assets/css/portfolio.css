@@ -1,0 +1,117 @@
+.container_portfolio {
+  background: linear-gradient(137deg, #101026 0%, #2D2C59 51.56%);
+  height: 2608px;
+}
+
+.content_portfolio {
+  position: relative;
+  top: 120px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+
+  height: 670px;
+}
+
+.portfolio-p > p {
+  padding: 2px;
+}
+
+.portfolio-p , .portfolio-title {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.portfolio-title {
+  padding-bottom: 40px;
+}
+
+
+/*tags simulando as tags html*/
+.port_open , .port_h2_close, .port_p_close , .carrousel_h3_close , .carrousel_p_close , .carrousel_p_open{
+  position: relative;
+}
+
+.port_open {
+  right: 20px;
+}
+
+.port_h2_close {
+  left: 120px;
+}
+
+.port_p_close {
+  left: 95%;
+}
+
+.carrousel {
+  height: 500px;
+  border-bottom: 1px solid white;
+}
+
+.item-carrousel {
+  position: relative;
+  margin: 0 auto;
+  width: 95%;
+  height: 370px;
+
+  border-radius: 15px;
+  background: #2D2C59;
+  box-shadow: 0px 0px 10px 2px #725EF2;
+
+  display: flex;
+  justify-content: center;
+}
+
+.title-carrousel {
+  padding-top: 15px;
+}
+
+.carrousel-title-inside {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.carrousel_h3_close {
+  left: 200px;
+}
+
+.carrousel-p {
+  position: absolute;
+  bottom: 1px;
+  text-align: center;
+}
+
+.carrousel-p > p {
+  width: 250px;
+}
+
+.carrousel_p_close {
+  left: 50%;
+}
+
+.carrousel_p_open {
+  right: 50%;
+}
+
+.img-carrousel {
+  position: relative;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.img-carrousel > img {
+  position: absolute;
+  right: -20px;
+}
+
+.smartphone {
+  z-index: 99;
+}
+
+.notebook {
+  z-index: 98;
+}

@@ -1,0 +1,70 @@
+@charset "Utf-8";
+
+
+.open {
+  display: inherit;
+}
+
+.close {
+  display: none;
+}
+
+.menu-icon {
+  position: absolute;
+  right: 0;
+  z-index: 3;
+  padding: 10px;
+}
+
+.menu {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  justify-content: space-around;
+  border-radius: 15px;
+  background: #725EF2;
+  box-shadow: 0px 0px 10px 2px #725EF2;
+  border: 1px solid #fff;
+
+  width: 222px;
+  height: 583px;
+  animation: menu-animation 0.5s ease ;
+}
+
+.menu > ul{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 25px;
+}
+
+.menu > ul > li {
+  list-style: none;
+  padding: 65px 15px 15px 15px;
+}
+
+.menu > ul > li > a {
+  padding-left: 30px;
+  position: relative;
+  top: -10px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu > ul > li:nth-child(3) > a {
+  left: -6px;
+  top: -12px;
+}
+
+@keyframes menu-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
