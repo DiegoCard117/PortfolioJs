@@ -36,6 +36,10 @@ export function Carrosel() {
               
               <span className='carrousel_p_close'>&lt;/p&gt;</span>
             </div>
+            <div className='navigation-carrousel'>
+                <span className='navigation_circle navigation_active'></span>
+                <span className='navigation_circle'></span>
+            </div>
           </div>
         </div>
         <div className='btn_portfolio_container'>
@@ -61,6 +65,10 @@ export function Carrosel() {
               <p>Projeto virá em breve, aguarde</p> 
               
               <span className='carrousel_p_close'>&lt;/p&gt;</span>
+            </div>
+            <div className='navigation-carrousel'>
+                <span className='navigation_circle'></span>
+                <span className='navigation_circle navigation_active'></span>
             </div>
           </div>
         </div>

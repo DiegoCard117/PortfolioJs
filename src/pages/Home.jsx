@@ -31,15 +31,18 @@ export function Home() {
           <div className='active'><a href="#home">&#12644;</a></div>
 
           <div className='traço'></div>
-          <div className='not_active'><a href="">&#12644;</a></div>
+          <div className='not_active'><a href="#works">&#12644;</a></div>
+
+          <div className='traço'></div>
+          <div className='not_active'><a href="#about">&#12644;</a></div>
 
           <div className='traço'></div>
           <div className='not_active'><a href="">&#12644;</a></div>
         </div>
         <div className='bottom_home'>
-          <a href="https://github.com/DiegoCard117" target='_blank' rel="noreferrer"><img src={github} alt="" /></a>
-          <a href="https://www.linkedin.com/in/diego-cardoso-534559203/" target='_blank' rel="noreferrer"><img src={linkedin} alt="" /></a>
-          <a href="https://www.instagram.com/dih_cardoso117/" target='_blank' rel="noreferrer"><img src={instagram} alt="" /></a>
+          <a href="https://github.com/DiegoCard117" target='_blank' rel="noreferrer"><img src={github} alt="github icon" /></a>
+          <a href="https://www.linkedin.com/in/diego-cardoso-534559203/" target='_blank' rel="noreferrer"><img src={linkedin} alt="linkedin icon" /></a>
+          <a href="https://www.instagram.com/dih_cardoso117/" target='_blank' rel="noreferrer"><img src={instagram} alt="insta icon" /></a>
         </div>
         <div className="arrow">
           <span className='span_scroll_arrow'>Scroll</span>

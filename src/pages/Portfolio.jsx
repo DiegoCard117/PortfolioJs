@@ -6,13 +6,25 @@ export function Portfolio() {
 
   return (
     <>
-      <div className='container_portfolio'>
+      <div id='works' className='container_portfolio'>
         <div className="content_portfolio">
           <div className='portfolio-title'>
             <span className='port_open'>&lt;h2&gt;</span>
             <h2 className='portfolio-title-inside'>My Portfolio</h2>
             <span className='port_h2_close'>&lt;/h2&gt;</span>
           </div>
+          <div className='navigation'>
+          <div className='not_active'><a href="#home">&#12644;</a></div>
+
+          <div className='traço'></div>
+          <div className='active'><a href="#works">&#12644;</a></div>
+
+          <div className='traço'></div>
+          <div className='not_active'><a href="#about">&#12644;</a></div>
+
+          <div className='traço'></div>
+          <div className='not_active'><a href="">&#12644;</a></div>
+        </div>
           <div className='portfolio-p'>
             <span className='port_open'>&lt;p&gt;</span>
             <p>Bem-vindo ao meu portfólio!</p> 

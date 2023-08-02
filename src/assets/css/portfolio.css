@@ -1,6 +1,7 @@
 .container_portfolio {
   background: linear-gradient(137deg, #101026 0%, #2D2C59 51.56%);
-  height: 2608px;
+  height: 1208px;
+  
 }
 
 .content_portfolio {
@@ -167,4 +168,30 @@
 
 .disable:hover {
   background-color: grey;
+}
+
+.navigation-carrousel {
+  position: absolute;
+  bottom: 1px;
+  right: 50%;
+  width: 50px;
+  height: 25px;
+  transform: translateX(50%);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navigation_circle {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #725EF2;
+  margin: 2px;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.navigation_active {
+  background-color: #725EF2;
 }

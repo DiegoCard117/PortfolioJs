@@ -1,13 +1,15 @@
 import { Home } from './pages/Home';
-import './assets/css/style.css'
 import { Portfolio } from './pages/Portfolio';
+import { AboutMe } from './pages/AboutMe';
+import './assets/css/style.css'
 
 
 export default function App() {
   return (
     <>
-    <Home />
-    <Portfolio />
+      <Home />
+      <Portfolio />
+      <AboutMe/>
     </>
   )
 }
