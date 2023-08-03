@@ -6,10 +6,11 @@
   box-sizing: border-box;
   font-family: 'Outfit', sans-serif;
   scroll-behavior: smooth;
+  color: #fff;
 }
 
 body {
   min-height: 100vh;
   color: #FFF;
-  background: #2D2C59;
+  background: linear-gradient(137deg, #101026 0%, #2D2C59 51.56%);
 }

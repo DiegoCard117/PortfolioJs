@@ -9,11 +9,13 @@ import arrow from '../assets/img/arrow_responsive.svg'
 
 import { Menu } from '../components/Menu';
 
+
 export function Home() {
 
   return (
 
     <>
+
       <Menu />
       <div className="container_home" id='home'>
         <div className='center_home'>
