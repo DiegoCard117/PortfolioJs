@@ -207,6 +207,10 @@
     margin-bottom: 100px;
   }
 
+  .final-menu {
+    display: none;
+  }
+
   .content_portfolio {
     margin-bottom: 150px;
   }
