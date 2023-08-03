@@ -96,3 +96,37 @@
   position: relative;
   left: 80%;
 }
+
+
+@media screen and (min-width: 1280px) {
+  .footer_h2_close {
+    left: 450px;
+  }
+
+  .footer-container > form {
+    width: 50%;
+  }
+
+  #msg, #email {
+    background: #2D2C59;
+    border: 1px solid #725EF2;
+  }
+
+  #msg::placeholder, #email::placeholder {
+    color: #725EF2;
+  }
+
+  #contact-btn {
+    width: 10%;
+    margin: 0;
+  }
+
+  .submit_open {
+    left: -25px;
+  }
+
+  .submit_close {
+    left: 7%;
+  }
+
+}

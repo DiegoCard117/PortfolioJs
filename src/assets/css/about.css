@@ -55,6 +55,10 @@
   transform: translate(-50%, -50%);
 }
 
+.grid-tec-desktop {
+  display: none;
+}
+
 .css {grid-area: css;}
 .html {grid-area: html;}
 .js {grid-area: js;}
@@ -93,3 +97,77 @@
   color: white;
 }
 
+.menu-bottom {
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
+  .about-title-inside {
+    font-size: 64px;
+  }
+  
+  .tec-box {
+    width: 40%;
+    height: 60%;
+    top: -750px;
+    left: 25%;
+  }
+
+  .grid-tec { display: none; }
+  .grid-tec-desktop {
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    display: grid;
+    grid-template-areas:
+      'css html js'
+      'react github figma';
+    row-gap: 50%;
+    column-gap: 25%;
+    align-content: center;
+    transform: translate(-40%, -50%);
+    text-align: center;
+  }
+
+  .grid-tec-desktop > img {
+    width: 200%;
+    object-fit: cover;
+  }
+
+  .menu-footer , .bottom_home {
+    display: none;
+  }
+
+  .menu-bottom {
+    position: relative;
+    top: -50%;
+    display: grid;
+    width: 400px;
+    margin: 0 auto;
+    place-items: center;
+    grid-template-areas:
+    'home about works'
+    'github linkdin insta';
+    row-gap: 50px;
+
+    align-content: center;
+    }
+
+  .menu-bottom > a {
+    text-decoration: none;
+  }
+
+  .about-title-inside {
+    font-size: 48px;
+  }
+
+  .about_h3_close {
+    left: 10%;
+  }
+
+  .container-about {
+    height: 1150px;
+  }
+
+
+}

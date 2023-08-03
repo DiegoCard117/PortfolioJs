@@ -33,6 +33,11 @@ export function Design() {
                     onHover: {
                         enable: true,
                         mode: "repulse",
+                        parallax: {
+                            enable:	true,
+                            force: 15,
+                            smooth: 15,
+                        },
                     },
                     resize: true,
                 },
@@ -72,7 +77,7 @@ export function Design() {
                         enable: true,
                         area: 800,
                     },
-                    value: 80,
+                    value: 20,
                 },
                 opacity: {
                     value: 0.2,

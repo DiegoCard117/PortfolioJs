@@ -5,6 +5,8 @@ import github from '../assets/img/github.svg'
 import linkedin from '../assets/img/linkedin.svg'
 import instagram from '../assets/img/instagram.svg'
 
+import note from '../assets/img/img-home.svg'
+
 import arrow from '../assets/img/arrow_responsive.svg'
 
 import { Menu } from '../components/Menu';
@@ -13,10 +15,14 @@ import { Menu } from '../components/Menu';
 export function Home() {
 
   return (
-
     <>
-
       <Menu />
+      <div className='menu-desktop'>
+        <a href="#home">Home</a>
+        <a href="#works">Works</a>
+        <a href="#about">About Me</a>
+        <a href="#footer">Contact Me</a>
+      </div>
       <div className="container_home" id='home'>
         <div className='center_home'>
           <span className='html_span'>&lt;html&gt;</span>
@@ -28,6 +34,9 @@ export function Home() {
             Dev Frotend
           </h1>
           <span className='h1_close_span'>&lt;/h1&gt;</span>
+        </div>
+        <div className='img-home'>
+            <img src={note} alt="" />
         </div>
         <div className='navigation'>
           <div className='active'><a href="#home">&#12644;</a></div>
@@ -49,6 +58,13 @@ export function Home() {
         <div className="arrow">
           <span className='span_scroll_arrow'>Scroll</span>
           <img src={arrow} alt="" />
+        </div>
+        <div className='contactme-home'>
+          <div className='btn-contact-home'>
+            <span className='span-home-btn'>&lt;button&gt;</span>
+            <a href="#footer">Contact Me</a>
+            <span className='span-home-btn-close'>&lt;/button&gt;</span>
+          </div>
         </div>
       </div>
     </>

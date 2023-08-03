@@ -10,13 +10,31 @@ import smart from '../assets/img/smartphone.svg'
 import notebook from '../assets/img/notebook.svg'
 import smartOff from '../assets/img/smartphone-off.svg'
 import notebookOff from '../assets/img/notebook-off.svg'
+import { useEffect, useState } from 'react';
 
 export function Carrosel() {
+
+  const [slidePerView, setSlidePerView] = useState(1)
+
+  useEffect( ()=> {
+    function handleRezise() {
+      window.innerWidth < 720 ? setSlidePerView(1) : setSlidePerView(2)
+    }
+
+    handleRezise()
+
+    window.addEventListener('resize', handleRezise)
+
+    return () => {
+      window.removeEventListener('resize', handleRezise)
+    }
+  }, [])
+
   register();
   return (
     <>
     <Swiper
-      slidesPerView={1}
+      slidesPerView={slidePerView}
     >
       <SwiperSlide>
       <div className='carrousel'>

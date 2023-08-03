@@ -1,4 +1,5 @@
 import '../assets/css/portfolio.css'
+import pc from '../assets/img/Devices.gif'
 
 import { Carrosel } from '../components/Carrosel'
  
@@ -12,6 +13,9 @@ export function Portfolio() {
             <span className='port_open'>&lt;h2&gt;</span>
             <h2 className='portfolio-title-inside'>My Portfolio</h2>
             <span className='port_h2_close'>&lt;/h2&gt;</span>
+          </div>
+          <div className='gif-pc'>
+            <img src={pc} alt="" />
           </div>
           <div className='navigation'>
             <div className='not_active'><a href="#home">&#12644;</a></div>

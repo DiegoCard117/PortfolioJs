@@ -1,5 +1,9 @@
 .container_portfolio {
-  height: 1208px;
+  min-height: 1208px;
+}
+
+.gif-pc {
+  display: none;
 }
 
 .content_portfolio {
@@ -30,7 +34,6 @@
 .portfolio-title-inside {
   font-weight: normal;
 }
-
 
 /*tags simulando as tags html*/
 .port_open , .port_h2_close, .port_p_close , .carrousel_h3_close , .carrousel_p_close , .carrousel_p_open{
@@ -196,4 +199,49 @@
 
 .navigation_active {
   background-color: #725EF2;
+}
+
+@media screen and (min-width: 1280px) {
+
+  .container_portfolio {
+    margin-bottom: 100px;
+  }
+
+  .content_portfolio {
+    margin-bottom: 150px;
+  }
+
+  h2 {
+    font-size: 64px;
+  }
+
+  .portfolio-p > p {
+    font-size: 24px;
+    width: 50%;
+  }
+
+  .carrousel {
+    width: 70%;
+    margin: 10px auto;
+  }
+
+  .item-carrousel {
+    height:400px;
+  }
+
+  .port_p_close {
+    left: 50%;
+  }
+
+  .gif-pc {
+    display: block;
+    position: absolute;
+    left: 60%;
+  }
+
+  .gif-pc > img {
+    border-radius: 72% 28% 77% 23% / 40% 55% 45% 60% ;
+    box-shadow: 0px 0px 40px #725EF2;
+  }
+
 }

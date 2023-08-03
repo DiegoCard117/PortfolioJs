@@ -7,6 +7,13 @@ import react from '../assets/img/react.svg'
 import git from '../assets/img/git.svg'
 import figma from '../assets/img/figma.svg'
 
+import cssbig from '../assets/img/css-big.svg'
+import htmlbig from '../assets/img/html-big.svg'
+import jsbig from '../assets/img/js-big.svg'
+import reactbig from '../assets/img/react-big.svg'
+import gitbig from '../assets/img/github-big.svg'
+import figmabig from '../assets/img/figma-big.svg'
+
 import github from '../assets/img/github.svg'
 import linkedin from '../assets/img/linkedin.svg'
 import instagram from '../assets/img/instagram.svg'
@@ -63,6 +70,14 @@ export function AboutMe() {
             <img className='github' src={git} alt="" />
             <img className='' src={figma} alt="" />
           </div>
+          <div className='grid-tec-desktop'>
+            <img className='css' src={cssbig} alt="" />
+            <img className='html' src={htmlbig} alt="" />
+            <img className='js' src={jsbig} alt="" />
+            <img className='react' src={reactbig} alt="" />
+            <img className='github' src={gitbig} alt="" />
+            <img className='' src={figmabig} alt="" />
+          </div>
           <div className='menu-footer'>
             <ul>
               <li><a href="#home">Home</a></li>
@@ -76,6 +91,14 @@ export function AboutMe() {
             <a href="https://www.instagram.com/dih_cardoso117/" target='_blank' rel="noreferrer"><img src={instagram} alt="insta icon" /></a>
           </div>
         </div>
+          <div className='menu-bottom'>
+            <a href="#home">Home</a>
+            <a href="#about">AboutMe</a>
+            <a href="#works">Works</a>
+            <a href="https://github.com/DiegoCard117" target='_blank' rel="noreferrer"><img src={github} alt="github icon" /></a>
+            <a href="https://www.linkedin.com/in/diego-cardoso-534559203/" target='_blank' rel="noreferrer"><img src={linkedin} alt="linkedin icon" /></a>
+            <a href="https://www.instagram.com/dih_cardoso117/" target='_blank' rel="noreferrer"><img src={instagram} alt="insta icon" /></a>
+          </div>
       </div>
     </>
   )

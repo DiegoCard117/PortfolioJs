@@ -5,7 +5,10 @@
   align-items: center;
 
   position: relative;
-  
+}
+
+.img-home , .menu-desktop, .contactme-home{
+  display: none;
 }
 
 .center_home {
@@ -41,7 +44,7 @@
 .bottom_home {
   border-radius: 15px;
   position: absolute;
-  bottom: 134px;
+  bottom: 100px;
   background: #725EF2;
   width: 338px;
   height: 53px;
@@ -105,4 +108,102 @@
 
 .active > a, .not_active > a {
   text-decoration: none;
+}
+
+@media screen and (min-width: 1280px){
+
+  .menu-desktop {
+    display: flex;
+    position: relative;
+    left: 50%;
+    justify-content: space-around;
+    width: 630px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    z-index: 999;
+  }
+
+  .menu-desktop > a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.3em;
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .menu-desktop > a:hover {
+    background-color: #725EF2;
+    transition: 0.5s ease;
+  }
+
+  .menu-desktop > a:nth-child(1) {
+    background-color: #725EF2;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .center_home {
+    right: 30%;
+    top: -10px;
+  }
+
+  .img-home {
+    position: absolute;
+    display: block;
+    left: 60%;
+  }
+
+  .center_home > h1 {
+    font-size: 64px;
+  }
+
+  .container_home {
+    top: -200px;
+  }
+
+  .bottom_home {
+    right: 5%;
+    bottom: 5%;
+  }
+
+  .contactme-home {
+    position: absolute;
+    display: block;
+    width: 144px;
+    bottom: 15%;
+    left: 10%;
+  }
+
+  .btn-contact-home {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn-contact-home > a {
+    background-color: #725EF2;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .btn-contact-home > a:hover {
+    background: #FFF;
+    color: #725EF2;
+
+    transition: 0.5s ease;
+  }
+
+  .span-home-btn {
+    position: relative;
+    right: 20%;
+  }
+
+  .span-home-btn-close {
+    position: relative;
+    left: 80%;
+  }
+
 }
