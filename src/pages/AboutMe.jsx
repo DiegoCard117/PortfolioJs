@@ -30,7 +30,7 @@ export function AboutMe() {
           <div className='active'><a href="#about">&#12644;</a></div>
 
           <div className='traço'></div>
-          <div className='not_active'><a href="">&#12644;</a></div>
+          <div className='not_active'><a href="#footer">&#12644;</a></div>
         </div>
         {/* paragrafo sobre mim */}
         <div className='portfolio-p'>

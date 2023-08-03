@@ -37,7 +37,7 @@ export function Home() {
           <div className='not_active'><a href="#about">&#12644;</a></div>
 
           <div className='traço'></div>
-          <div className='not_active'><a href="">&#12644;</a></div>
+          <div className='not_active'><a href="#footer">&#12644;</a></div>
         </div>
         <div className='bottom_home'>
           <a href="https://github.com/DiegoCard117" target='_blank' rel="noreferrer"><img src={github} alt="github icon" /></a>

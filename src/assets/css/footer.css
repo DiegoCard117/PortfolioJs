@@ -1,0 +1,100 @@
+
+.footer {
+  background: linear-gradient(137deg, #2D2C59 90% , #1d1d41);
+  height: 601px;
+  position: relative;
+  top: -1px;
+  width: 100%;
+}
+
+.footer-container {
+  padding-top: 50px;
+  width: 90%;
+}
+
+.footer-container > h2 {
+  padding-left: 15px;
+}
+
+.footer-container > span {
+  padding-left: 15px;
+}
+
+.nav-footer {
+  top: 20px;
+}
+
+.footer_h2_close {
+  left: 160px;
+}
+
+.input_close {
+  left: 85%;
+  top: 5px;
+}
+
+.input_open {
+  position: relative;
+  left: -5px;
+}
+
+.btn-submit {
+  width: 90%;
+  position: absolute;
+  bottom: 100px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#email , #msg {
+  display: block;
+  width: 90%;
+  height: 45px;
+  background-color: #725EF2;
+  margin: 0 auto;
+  border: none;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+#email {
+  margin-bottom: 20px;
+}
+
+#email::placeholder , #msg::placeholder {
+  color: #1d1d41;
+  padding-left: 10px;
+  font-size: 16px;
+}
+
+#email:focus , #msg:focus {
+  outline: none;
+}
+
+#contact-btn {
+  display: block;
+  width: 85%;
+  border: none;
+  border-radius: 10px;
+  background: #725EF2;
+
+  height: 30px;
+  color: white;
+
+  margin: 0 auto;
+
+}
+
+.submit_open , .submit_close {
+  width: 70px;
+}
+
+.submit_open {
+  left: -5px;
+}
+
+.submit_close {
+  position: relative;
+  left: 80%;
+}

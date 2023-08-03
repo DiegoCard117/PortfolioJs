@@ -1,6 +1,6 @@
 .container-about {
   background: linear-gradient(137deg, #101026 0%, #2D2C59 51.56%);
-  height: 1750px;
+  height: 1350px;
 }
 
 .about-title {
@@ -66,6 +66,8 @@
 .final-menu {
   background: transparent;
   bottom: -200px;
+  left: 51%;
+  transform: translateX(-50%);
 }
 
 .menu-footer {

@@ -29,6 +29,10 @@
   padding-bottom: 40px;
 }
 
+.portfolio-title-inside {
+  font-weight: normal;
+}
+
 
 /*tags simulando as tags html*/
 .port_open , .port_h2_close, .port_p_close , .carrousel_h3_close , .carrousel_p_close , .carrousel_p_open{
