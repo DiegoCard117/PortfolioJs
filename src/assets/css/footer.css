@@ -37,7 +37,7 @@
 }
 
 .btn-submit {
-  width: 90%;
+  width: 80%;
   position: absolute;
   bottom: 100px;
 
@@ -95,6 +95,10 @@
 .submit_close {
   position: relative;
   left: 80%;
+}
+
+.input_close {
+  position: relative;
 }
 
 

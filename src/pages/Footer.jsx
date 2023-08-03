@@ -68,11 +68,11 @@ export function Footer() {
             value={message}
           />
 
-          <span className='port_h2_close input_close'>&lt;/input&gt;</span>
+          <span className='input_close'>&lt;/input&gt;</span>
           <div className='btn-submit'>
             <span className='port_open submit_open'>&lt;button&gt;</span>
             <input type="submit" id='contact-btn' value="Contact Me" />
-            <span className='port_h2_close submit_close'>&lt;/button&gt;</span>
+            <span className='submit_close'>&lt;/button&gt;</span>
           </div>
         </form>
       </div>
