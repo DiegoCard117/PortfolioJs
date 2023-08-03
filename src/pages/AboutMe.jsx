@@ -10,7 +10,7 @@ import cssbig from '../assets/img/css-big.svg'
 import htmlbig from '../assets/img/html-big.svg'
 import jsbig from '../assets/img/js-big.svg'
 import reactbig from '../assets/img/react-big.svg'
-//import gitbig from '../assets/img/git-big.svg'
+import gitbig from '../assets/img/git-big.svg'
 import figmabig from '../assets/img/figma-big.svg'
 
 import github from '../assets/img/github.svg'
@@ -74,7 +74,7 @@ export function AboutMe() {
             <img className='html' src={htmlbig} alt="" />
             <img className='js' src={jsbig} alt="" />
             <img className='react' src={reactbig} alt="" />
-            <img className='github' src={jsbig} alt="" />
+            <img className='github' src={gitbig} alt="" />
             <img className='' src={figmabig} alt="" />
           </div>
           <div className='menu-footer'>
