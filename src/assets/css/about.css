@@ -66,12 +66,6 @@
 .github {grid-area: github;}
 .figma {grid-area: figma;}
 
-.final-menu {
-  background: transparent;
-  bottom: -200px;
-  left: 51%;
-  transform: translateX(-50%);
-}
 
 .menu-footer {
   position: absolute;
