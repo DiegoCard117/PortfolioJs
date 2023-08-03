@@ -10,7 +10,7 @@ import cssbig from '../assets/img/css-big.svg'
 import htmlbig from '../assets/img/html-big.svg'
 import jsbig from '../assets/img/js-big.svg'
 import reactbig from '../assets/img/react-big.svg'
-import gitbig from '../assets/img/github-big.svg'
+import gitbig from '../assets/img/git-big.svg'
 import figmabig from '../assets/img/figma-big.svg'
 
 import github from '../assets/img/github.svg'
