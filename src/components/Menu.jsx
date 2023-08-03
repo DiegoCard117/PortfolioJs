@@ -28,8 +28,8 @@ export function Menu() {
               <ul>
                 <li><img src={ home } alt="" /><a href="#home">Home</a></li>
                 <li><img src={ work } alt="" /><a href="#works">Works</a></li>
-                <li><img src={ about } alt="" /><a href="">About Me</a></li>
-                <li><img src={ contact } alt="" /><a href="">Contact</a></li>
+                <li><img src={ about } alt="" /><a href="#about">About Me</a></li>
+                <li><img src={ contact } alt="" /><a href="#footer">Contact</a></li>
               </ul>
             </div>
           </nav>
