@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import '../assets/css/footer.css'
 
 import emailjs from '@emailjs/browser'
 

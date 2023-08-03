@@ -1,4 +1,3 @@
-import '../assets/css/about.css'
 
 import css from '../assets/img/css.svg'
 import html from '../assets/img/html.svg'

@@ -1,5 +1,3 @@
-import '../assets/css/menu.css'
-import '../assets/css/home.css'
 
 import github from '../assets/img/github.svg'
 import linkedin from '../assets/img/linkedin.svg'

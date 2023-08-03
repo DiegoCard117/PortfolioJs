@@ -1,4 +1,3 @@
-import '../assets/css/portfolio.css'
 import pc from '../assets/img/Devices.gif'
 
 import { Carrosel } from '../components/Carrosel'
