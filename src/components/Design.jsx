@@ -34,7 +34,7 @@ export function Design() {
                         enable: true,
                         mode: "repulse",
                         parallax: {
-                            enable:	true,
+                            enable:	false,
                             force: 15,
                             smooth: 15,
                         },

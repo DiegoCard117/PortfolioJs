@@ -16,8 +16,19 @@ import figmabig from '../assets/img/figma-big.svg'
 import github from '../assets/img/github.svg'
 import linkedin from '../assets/img/linkedin.svg'
 import instagram from '../assets/img/instagram.svg'
+import { useState } from 'react';
 
 export function AboutMe() {
+
+  const [span, setSpan] = useState('img-span close')
+  const [isSpanOpen, setIsSpanOpen] = useState(false)
+
+  const openSpan = () => {
+    !isSpanOpen ? setSpan('img-span open') : setSpan('img-span close')
+    setIsSpanOpen(!isSpanOpen)
+    }
+ 
+
   return (
     <>
       <div id='about' className="container-about">
@@ -55,27 +66,56 @@ export function AboutMe() {
           <span className='port_p_close'>&lt;/p&gt;</span>
         </div>
 
-        <div className='tec-box'>
+        <div className='tec-box' onClick={openSpan}>
           <div className="title-about">
             <span className='port_open carrousel_h3_open'>&lt;h3&gt;</span>
             <h3 className='about-title-inside'>Tecnologies</h3>
             <span className='about_h3_close'>&lt;/h3&gt;</span>
           </div>
           <div className='grid-tec'>
-            <img className='css' src={css} alt="" />
-            <img className='html' src={html} alt="" />
-            <img className='js' src={js} alt="" />
-            <img className='react' src={react} alt="" />
-            <img className='github' src={git} alt="" />
-            <img className='' src={figma} alt="" />
+            <div className='css' >
+              <img src={css} alt="Css3" />
+                <span className={span}>CSS3</span>
+            </div>
+
+            <div className='html'>
+            <img  src={html} alt="Html5" />
+              <span className={span}>Html5</span>
+            </div>
+
+            <div className="js">
+              <img src={js} alt="Javascript" />
+                <span className={span}>Javascript</span>
+            </div>
+
+            <div className="react span-bottom">
+              <img src={react} alt="ReactJs" />
+                <span className={span}>ReactJs</span>
+            </div>
+
+            <div className='github span-bottom'>
+              <img src={git} alt="Github" />
+                <span className={span}>Github</span>
+            </div>
+
+            <div className='figma span-bottom'>
+              <img src={figma} alt="Figma" />
+                <span className={span}>Figma</span>
+            </div>
           </div>
           <div className='grid-tec-desktop'>
-            <img className='css' src={cssbig} alt="" />
-            <img className='html' src={htmlbig} alt="" />
-            <img className='js' src={jsbig} alt="" />
-            <img className='react' src={reactbig} alt="" />
-            <img className='github' src={gitbig} alt="" />
-            <img className='' src={figmabig} alt="" />
+            <img className='css' src={cssbig} alt="Css3" />
+              <span className={span}>CSS3</span>
+            <img className='html' src={htmlbig} alt="Html5" />
+              <span className={span}>CSS3</span>
+            <img className='js' src={jsbig} alt="Javascript" />
+              <span className={span}>Javascript</span>
+            <img className='react' src={reactbig} alt="ReactJs" />
+              <span className={span}>ReactJs</span>
+            <img className='github' src={gitbig} alt="Github" />
+              <span className={span}>Github</span>
+            <img className='' src={figmabig} alt="Figma" />
+              <span className={span}>Figma</span>
           </div>
           <div className='menu-footer'>
             <ul>

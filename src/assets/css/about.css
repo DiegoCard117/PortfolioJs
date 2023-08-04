@@ -95,6 +95,17 @@
   display: none;
 }
 
+/*open e close*/
+.img-span {
+  position: absolute;
+  top: -20px;
+}
+
+.span-bottom {
+  position: relative;
+  top: 10px;
+}
+
 @media screen and (min-width: 1280px) {
   .about-title-inside {
     font-size: 64px;
@@ -163,5 +174,16 @@
     height: 1150px;
   }
 
+  /*arrumar legenda das imagens*/
+  .img-span {
+    color: transparent;
+    position: absolute;
+    top: -20px;
+  }
+  
+  .span-bottom {
+    position: relative;
+    top: 10px;
+  }
 
 }
