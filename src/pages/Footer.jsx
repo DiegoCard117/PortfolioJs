@@ -35,7 +35,7 @@ export function Footer() {
       <div className='portfolio-title footer-container'>
         <span className='port_open'>&lt;h2&gt;</span>
         <h2 className='portfolio-title-inside footer-title'>Connect with me</h2>
-        <span className='port_h2_close footer_h2_close'>&lt;/h2&gt;</span>
+        <span className='footer_h2_close'>&lt;/h2&gt;</span>
       </div>
       <div className='navigation nav-footer'>
         <div className='not_active'><a href="#home">&#12644;</a></div>

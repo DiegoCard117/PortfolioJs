@@ -103,6 +103,7 @@
 
 @media screen and (min-width: 1280px) {
   .footer_h2_close {
+    position: relative;
     left: 450px;
   }
 
@@ -130,6 +131,10 @@
 
   .submit_close {
     left: 7%;
+  }
+
+  .input_close {
+    left: 91%;
   }
 
 }
