@@ -115,6 +115,19 @@
   right: -20px;
 }
 
+.Rn > img {
+  width: 90px;
+  transform: translateX(-95%);
+}
+
+.Rn > img:nth-child(1) {
+  left: 40px;
+}
+
+.Rn > img:nth-child(3) {
+  left: -180px;
+}
+
 .smartphone {
   z-index: 99;
   filter: drop-shadow(0 0 0.75rem #725ef273);
@@ -253,6 +266,19 @@
   .gif-pc > img {
     border-radius: 72% 28% 77% 23% / 40% 55% 45% 60% ;
     box-shadow: 0px 0px 40px #725EF2;
+  }
+
+  .Rn > img {
+    width: 90px;
+    transform: translateX(-70%);
+  }
+  
+  .Rn > img:nth-child(1) {
+    left: 80px;
+  }
+  
+  .Rn > img:nth-child(3) {
+    left: -220px;
   }
 
 }
