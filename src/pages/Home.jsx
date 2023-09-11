@@ -1,11 +1,11 @@
 
-import github from '../assets/img/github.svg'
-import linkedin from '../assets/img/linkedin.svg'
-import instagram from '../assets/img/instagram.svg'
+import github from '../assets/img/github.svg';
+import linkedin from '../assets/img/linkedin.svg';
+import instagram from '../assets/img/instagram.svg';
 
-import note from '../assets/img/img-home.svg'
+import note from '../assets/img/img-home.svg';
 
-import arrow from '../assets/img/arrow_responsive.svg'
+import arrow from '../assets/img/arrow_responsive.svg';
 
 import { Menu } from '../components/Menu';
 
@@ -27,14 +27,14 @@ export function Home() {
           <span className='body_span'>&lt;body&gt;</span>
           <span className='h1_span'>&lt;h1&gt;</span>
           <h1 id='title-type-writter'>
-            Hello! <br/>
+            Hello! <br />
             I&apos;m Diego <br />
             Dev Frotend
           </h1>
           <span className='h1_close_span'>&lt;/h1&gt;</span>
         </div>
         <div className='img-home'>
-            <img src={note} alt="" />
+          <img src={note} alt="" />
         </div>
         <div className='navigation'>
           <div className='active'><a href="#home">&#12644;</a></div>
@@ -66,7 +66,7 @@ export function Home() {
         </div>
       </div>
     </>
-  )
+  );
 }
 
 

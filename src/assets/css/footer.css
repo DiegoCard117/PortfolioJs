@@ -10,11 +10,11 @@
   width: 90%;
 }
 
-.footer-container > h2 {
+.footer-container>h2 {
   padding-left: 15px;
 }
 
-.footer-container > span {
+.footer-container>span {
   padding-left: 15px;
 }
 
@@ -45,7 +45,8 @@
   flex-direction: column;
 }
 
-#email , #msg {
+#email,
+#msg {
   display: block;
   width: 90%;
   height: 45px;
@@ -60,13 +61,15 @@
   margin-bottom: 20px;
 }
 
-#email::placeholder , #msg::placeholder {
+#email::placeholder,
+#msg::placeholder {
   color: #1d1d41;
   padding-left: 10px;
   font-size: 16px;
 }
 
-#email:focus , #msg:focus {
+#email:focus,
+#msg:focus {
   outline: none;
 }
 
@@ -84,7 +87,8 @@
 
 }
 
-.submit_open , .submit_close {
+.submit_open,
+.submit_close {
   width: 70px;
 }
 
@@ -107,16 +111,18 @@
     left: 450px;
   }
 
-  .footer-container > form {
+  .footer-container>form {
     width: 50%;
   }
 
-  #msg, #email {
+  #msg,
+  #email {
     background: #2D2C59;
     border: 1px solid #725EF2;
   }
 
-  #msg::placeholder, #email::placeholder {
+  #msg::placeholder,
+  #email::placeholder {
     color: #725EF2;
   }
 

@@ -59,12 +59,29 @@
   display: none;
 }
 
-.css {grid-area: css;}
-.html {grid-area: html;}
-.js {grid-area: js;}
-.react {grid-area: react;}
-.github {grid-area: github;}
-.figma {grid-area: figma;}
+.css {
+  grid-area: css;
+}
+
+.html {
+  grid-area: html;
+}
+
+.js {
+  grid-area: js;
+}
+
+.react {
+  grid-area: react;
+}
+
+.github {
+  grid-area: github;
+}
+
+.figma {
+  grid-area: figma;
+}
 
 
 .menu-footer {
@@ -75,18 +92,18 @@
   transform: translateX(-50%);
 }
 
-.menu-footer > ul {
+.menu-footer>ul {
   display: flex;
 }
 
-.menu-footer > ul > li {
+.menu-footer>ul>li {
   display: block;
   list-style: none;
   padding: 0px 25px;
   text-align: center;
 }
 
-.menu-footer > ul > li > a {
+.menu-footer>ul>li>a {
   text-decoration: none;
   color: white;
 }
@@ -110,7 +127,7 @@
   .about-title-inside {
     font-size: 64px;
   }
-  
+
   .tec-box {
     width: 40%;
     height: 60%;
@@ -118,7 +135,10 @@
     left: 25%;
   }
 
-  .grid-tec { display: none; }
+  .grid-tec {
+    display: none;
+  }
+
   .grid-tec-desktop {
     position: absolute;
     top: 60%;
@@ -134,12 +154,13 @@
     text-align: center;
   }
 
-  .grid-tec-desktop > img {
+  .grid-tec-desktop>img {
     width: 200%;
     object-fit: cover;
   }
 
-  .menu-footer , .bottom_home {
+  .menu-footer,
+  .bottom_home {
     display: none;
   }
 
@@ -151,14 +172,14 @@
     margin: 0 auto;
     place-items: center;
     grid-template-areas:
-    'home about works'
-    'github linkdin insta';
+      'home about works'
+      'github linkdin insta';
     row-gap: 50px;
 
     align-content: center;
-    }
+  }
 
-  .menu-bottom > a {
+  .menu-bottom>a {
     text-decoration: none;
   }
 
@@ -180,7 +201,7 @@
     position: absolute;
     top: -20px;
   }
-  
+
   .span-bottom {
     position: relative;
     top: 10px;

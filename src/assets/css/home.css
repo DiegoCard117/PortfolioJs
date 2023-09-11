@@ -7,7 +7,9 @@
   position: relative;
 }
 
-.img-home , .menu-desktop, .contactme-home{
+.img-home,
+.menu-desktop,
+.contactme-home {
   display: none;
 }
 
@@ -16,12 +18,12 @@
   top: -25px;
 }
 
-.center_home > h1 {
+.center_home>h1 {
   font-size: 48px;
   font-weight: 400;
 }
 
-.center_home > span {
+.center_home>span {
   display: block;
   position: relative;
   font-size: 20px;
@@ -30,12 +32,15 @@
 .html_span {
   right: 40px;
 }
+
 .body_span {
   right: 20px;
 }
+
 .h1_span {
   right: 10px;
 }
+
 .h1_close_span {
   float: right;
   left: 20px;
@@ -64,7 +69,8 @@
   padding: 5px;
 }
 
-.arrow > span , .arrow > img {
+.arrow>span,
+.arrow>img {
   display: block;
 }
 
@@ -73,7 +79,7 @@
   padding-bottom: 8px;
 }
 
-.arrow > img {
+.arrow>img {
   width: 21px;
 }
 
@@ -85,7 +91,7 @@
   align-items: center;
 }
 
-.active{
+.active {
   width: 16px;
   height: 16px;
   border-radius: 50%;
@@ -106,11 +112,12 @@
   background: white;
 }
 
-.active > a, .not_active > a {
+.active>a,
+.not_active>a {
   text-decoration: none;
 }
 
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 1280px) {
 
   .menu-desktop {
     display: flex;
@@ -123,7 +130,7 @@
     z-index: 999;
   }
 
-  .menu-desktop > a {
+  .menu-desktop>a {
     display: block;
     text-decoration: none;
     font-size: 1.3em;
@@ -131,12 +138,12 @@
     border-radius: 5px;
   }
 
-  .menu-desktop > a:hover {
+  .menu-desktop>a:hover {
     background-color: #725EF2;
     transition: 0.5s ease;
   }
 
-  .menu-desktop > a:nth-child(1) {
+  .menu-desktop>a:nth-child(1) {
     background-color: #725EF2;
   }
 
@@ -155,7 +162,7 @@
     left: 60%;
   }
 
-  .center_home > h1 {
+  .center_home>h1 {
     font-size: 64px;
   }
 
@@ -181,7 +188,7 @@
     flex-direction: column;
   }
 
-  .btn-contact-home > a {
+  .btn-contact-home>a {
     background-color: #725EF2;
     border-radius: 10px;
     text-decoration: none;
@@ -189,7 +196,7 @@
     text-align: center;
   }
 
-  .btn-contact-home > a:hover {
+  .btn-contact-home>a:hover {
     background: #FFF;
     color: #725EF2;
 

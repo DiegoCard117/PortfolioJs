@@ -1,33 +1,33 @@
 
-import css from '../assets/img/css.svg'
-import html from '../assets/img/html.svg'
-import js from '../assets/img/js.svg'
-import react from '../assets/img/react.svg'
-import git from '../assets/img/git.svg'
-import figma from '../assets/img/figma.svg'
+import css from '../assets/img/css.svg';
+import html from '../assets/img/html.svg';
+import js from '../assets/img/js.svg';
+import react from '../assets/img/react.svg';
+import git from '../assets/img/git.svg';
+import figma from '../assets/img/figma.svg';
 
-import cssbig from '../assets/img/css-big.svg'
-import htmlbig from '../assets/img/html-big.svg'
-import jsbig from '../assets/img/js-big.svg'
-import reactbig from '../assets/img/react-big.svg'
-import gitbig from '../assets/img/git-big.svg'
-import figmabig from '../assets/img/figma-big.svg'
+import cssbig from '../assets/img/css-big.svg';
+import htmlbig from '../assets/img/html-big.svg';
+import jsbig from '../assets/img/js-big.svg';
+import reactbig from '../assets/img/react-big.svg';
+import gitbig from '../assets/img/git-big.svg';
+import figmabig from '../assets/img/figma-big.svg';
 
-import github from '../assets/img/github.svg'
-import linkedin from '../assets/img/linkedin.svg'
-import instagram from '../assets/img/instagram.svg'
+import github from '../assets/img/github.svg';
+import linkedin from '../assets/img/linkedin.svg';
+import instagram from '../assets/img/instagram.svg';
 import { useState } from 'react';
 
 export function AboutMe() {
 
-  const [span, setSpan] = useState('img-span close')
-  const [isSpanOpen, setIsSpanOpen] = useState(false)
+  const [span, setSpan] = useState('img-span close');
+  const [isSpanOpen, setIsSpanOpen] = useState(false);
 
   const openSpan = () => {
-    !isSpanOpen ? setSpan('img-span open') : setSpan('img-span close')
-    setIsSpanOpen(!isSpanOpen)
-    }
- 
+    !isSpanOpen ? setSpan('img-span open') : setSpan('img-span close');
+    setIsSpanOpen(!isSpanOpen);
+  };
+
 
   return (
     <>
@@ -75,47 +75,47 @@ export function AboutMe() {
           <div className='grid-tec'>
             <div className='css' >
               <img src={css} alt="Css3" />
-                <span className={span}>CSS3</span>
+              <span className={span}>CSS3</span>
             </div>
 
             <div className='html'>
-            <img  src={html} alt="Html5" />
+              <img src={html} alt="Html5" />
               <span className={span}>Html5</span>
             </div>
 
             <div className="js">
               <img src={js} alt="Javascript" />
-                <span className={span}>Javascript</span>
+              <span className={span}>Javascript</span>
             </div>
 
             <div className="react span-bottom">
               <img src={react} alt="ReactJs" />
-                <span className={span}>ReactJs</span>
+              <span className={span}>ReactJs</span>
             </div>
 
             <div className='github span-bottom'>
               <img src={git} alt="Github" />
-                <span className={span}>Github</span>
+              <span className={span}>Github</span>
             </div>
 
             <div className='figma span-bottom'>
               <img src={figma} alt="Figma" />
-                <span className={span}>Figma</span>
+              <span className={span}>Figma</span>
             </div>
           </div>
           <div className='grid-tec-desktop'>
             <img className='css' src={cssbig} alt="Css3" />
-              <span className={span}>CSS3</span>
+            <span className={span}>CSS3</span>
             <img className='html' src={htmlbig} alt="Html5" />
-              <span className={span}>CSS3</span>
+            <span className={span}>CSS3</span>
             <img className='js' src={jsbig} alt="Javascript" />
-              <span className={span}>Javascript</span>
+            <span className={span}>Javascript</span>
             <img className='react' src={reactbig} alt="ReactJs" />
-              <span className={span}>ReactJs</span>
+            <span className={span}>ReactJs</span>
             <img className='github' src={gitbig} alt="Github" />
-              <span className={span}>Github</span>
+            <span className={span}>Github</span>
             <img className='' src={figmabig} alt="Figma" />
-              <span className={span}>Figma</span>
+            <span className={span}>Figma</span>
           </div>
           <div className='menu-footer'>
             <ul>
@@ -130,15 +130,15 @@ export function AboutMe() {
             <a href="https://www.instagram.com/dih_cardoso117/" target='_blank' rel="noreferrer"><img src={instagram} alt="insta icon" /></a>
           </div>
         </div>
-          <div className='menu-bottom'>
-            <a href="#home">Home</a>
-            <a href="#about">AboutMe</a>
-            <a href="#works">Works</a>
-            <a href="https://github.com/DiegoCard117" target='_blank' rel="noreferrer"><img src={github} alt="github icon" /></a>
-            <a href="https://www.linkedin.com/in/diego-cardoso-534559203/" target='_blank' rel="noreferrer"><img src={linkedin} alt="linkedin icon" /></a>
-            <a href="https://www.instagram.com/dih_cardoso117/" target='_blank' rel="noreferrer"><img src={instagram} alt="insta icon" /></a>
-          </div>
+        <div className='menu-bottom'>
+          <a href="#home">Home</a>
+          <a href="#about">AboutMe</a>
+          <a href="#works">Works</a>
+          <a href="https://github.com/DiegoCard117" target='_blank' rel="noreferrer"><img src={github} alt="github icon" /></a>
+          <a href="https://www.linkedin.com/in/diego-cardoso-534559203/" target='_blank' rel="noreferrer"><img src={linkedin} alt="linkedin icon" /></a>
+          <a href="https://www.instagram.com/dih_cardoso117/" target='_blank' rel="noreferrer"><img src={instagram} alt="insta icon" /></a>
+        </div>
       </div>
     </>
-  )
+  );
 }

@@ -29,22 +29,22 @@
 
   width: 222px;
   height: 583px;
-  animation: menu-animation 0.5s ease ;
+  animation: menu-animation 0.5s ease;
 }
 
-.menu > ul{
+.menu>ul {
   display: flex;
   flex-direction: column;
   position: relative;
   top: 25px;
 }
 
-.menu > ul > li {
+.menu>ul>li {
   list-style: none;
   padding: 65px 15px 15px 15px;
 }
 
-.menu > ul > li > a {
+.menu>ul>li>a {
   padding-left: 30px;
   position: relative;
   top: -10px;
@@ -52,7 +52,7 @@
   text-decoration: none;
 }
 
-.menu > ul > li:nth-child(3) > a {
+.menu>ul>li:nth-child(3)>a {
   left: -6px;
   top: -12px;
 }
