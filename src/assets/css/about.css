@@ -1,5 +1,23 @@
 .container-about {
-  height: 1350px;
+  margin-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.social-bottom {
+  width: 90%;
+  display: flex;
+  align-self: center;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  background: #725EF2;
+}
+
+.social-bottom a {
+  display: block;
 }
 
 .about-title {
@@ -9,6 +27,7 @@
 .about_h2_close {
   position: relative;
   left: 100px;
+  width: 50px;
 }
 
 .tec-box {
@@ -53,6 +72,16 @@
   column-gap: 55px;
   align-content: center;
   transform: translate(-50%, -50%);
+}
+
+.portfolio-p-tec {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.portfolio-p {
+  max-width: 500px;
 }
 
 .grid-tec-desktop {
@@ -165,9 +194,9 @@
   }
 
   .menu-bottom {
+    display: none;
     position: relative;
     top: -50%;
-    display: grid;
     width: 400px;
     margin: 0 auto;
     place-items: center;
@@ -207,4 +236,8 @@
     top: 10px;
   }
 
+  .social-bottom {
+    display:none;
+  }
+   
 }

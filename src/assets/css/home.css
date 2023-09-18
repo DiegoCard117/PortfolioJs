@@ -1,3 +1,4 @@
+
 .container_home {
   min-height: 100vh;
   display: flex;
@@ -211,6 +212,10 @@
   .span-home-btn-close {
     position: relative;
     left: 80%;
+  }
+
+  .footer_h2_close {
+    width: 100px;
   }
 
 }
