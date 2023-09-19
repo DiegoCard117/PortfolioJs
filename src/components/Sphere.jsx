@@ -46,7 +46,7 @@ export default function Sphere() {
       'Zod',
       'Expo',
       'Vite',
-      'Yasmin meu amor, dona do meu ser'
+      'Y'
     ];
 
     const options = {
