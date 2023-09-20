@@ -2,17 +2,19 @@ import { Home } from './pages/Home';
 import { Portfolio } from './pages/Portfolio';
 import { AboutMe } from './pages/AboutMe';
 import { Footer } from './pages/Footer';
+import React from 'react';
 
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
-import './assets/css/style.css'
-import './assets/css/about.css'
-import './assets/css/menu.css'
-import './assets/css/home.css'
-import './assets/css/footer.css'
-import './assets/css/portfolio.css'
+
+import './assets/css/style.scss'
+import './assets/css/menu.scss'
+import './assets/css/home.scss'
+import './assets/css/footer.scss'
+import './assets/css/portfolio.scss'
+import './assets/css/about.scss'
 
 import { Design } from './components/Design'
 

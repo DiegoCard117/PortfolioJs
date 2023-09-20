@@ -5,7 +5,7 @@ import work from '../assets/img/work.svg';
 import contact from '../assets/img/contact.svg';
 import about from '../assets/img/about.svg';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 
 export function Menu() {
@@ -15,6 +15,7 @@ export function Menu() {
   const updateMenu = () => {
     !isMenuClicked ? setMenuClass("menu open") : setMenuClass("menu close");
     setIsMenuClicked(!isMenuClicked);
+    isMenuClicked ? document.body.style.overflow = 'auto' : document.body.style.overflow = 'hidden';
   };
 
   return (

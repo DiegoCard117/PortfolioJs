@@ -1,4 +1,4 @@
-
+import React from 'react';
 import github from '../assets/img/github.svg';
 import linkedin from '../assets/img/linkedin.svg';
 import instagram from '../assets/img/instagram.svg';

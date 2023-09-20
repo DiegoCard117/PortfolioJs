@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { register } from 'swiper/element/bundle';
 
 import smart from '../assets/img/smartphone.svg';
@@ -7,30 +8,29 @@ import smartOff from '../assets/img/smartphone-off.svg';
 import notebookOff from '../assets/img/notebook-off.svg';
 
 import noteEc from '../assets/img/noteEcommerce.svg'
-import tel from '../assets/img/telEcoomerce.svg'
+import tel from '../assets/img/telEcommerce.svg'
 
 
 import login from '../assets/img/telaRNlogin.png';
 import product from '../assets/img/telaRNproduct.png';
 import home from '../assets/img/telaRNhome.png';
 
-import { useEffect, useState } from 'react';
-
+import React, { useEffect, useState } from 'react';
 export function Carrosel() {
 
   const [slidePerView, setSlidePerView] = useState(1);
 
   useEffect(() => {
-    function handleRezise() {
+    function handleResize() {
       window.innerWidth < 720 ? setSlidePerView(1) : setSlidePerView(2);
     }
 
-    handleRezise();
+    handleResize();
 
-    window.addEventListener('resize', handleRezise);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleRezise);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -86,7 +86,7 @@ export function Carrosel() {
               </div>
               <div className='carrousel-p'>
                 <span className='carrousel_p_open'>&lt;p&gt;</span>
-                <p>Ecoomerce feito em React Native</p>
+                <p>Ecommerce feito em React Native</p>
 
                 <span className='carrousel_p_close'>&lt;/p&gt;</span>
               </div>

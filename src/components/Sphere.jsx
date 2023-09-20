@@ -1,17 +1,17 @@
-import {useEffect, useRef, useState} from "react"
-import TagCloud from "TagCloud"
+import { useEffect, useRef, useState } from "react";
+import TagCloud from "TagCloud";
 
-import '../assets/css/sphere.css'
+import '../assets/css/sphere.scss';
 
 export default function Sphere() {
-  const tagCloudRef = useRef(null)
+  const tagCloudRef = useRef(null);
   const [radiusSize, setRadiusSize] = useState(180);
 
   useEffect(() => {
     function handleResize() {
       window.innerWidth < 720 ? setRadiusSize(180) : setRadiusSize(300);
     }
-    
+
     console.log(radiusSize);
     handleResize();
 
@@ -45,8 +45,7 @@ export default function Sphere() {
       'Prisma',
       'Zod',
       'Expo',
-      'Vite',
-      'Y'
+      'Vite', ''
     ];
 
     const options = {
@@ -54,7 +53,6 @@ export default function Sphere() {
       maxSpeed: 'normal',
       initSpeed: 'normal',
       keep: true,
-      
     };
 
     container.innerHTML = ''
@@ -63,9 +61,8 @@ export default function Sphere() {
   }, [radiusSize]);
 
   return (
-      <div className="containerSphere">
-        <span ref={tagCloudRef}> </span>
-       
-      </div>
-  )
+    <div className="containerSphere">
+      <span ref={tagCloudRef}> </span>
+    </div>
+  );
 }
