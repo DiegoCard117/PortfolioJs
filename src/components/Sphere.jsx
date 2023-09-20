@@ -46,6 +46,7 @@ export default function Sphere() {
       'Zod',
       'Expo',
       'Vite',
+      'Y'
     ];
 
     const options = {
