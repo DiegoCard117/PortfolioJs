@@ -8,17 +8,17 @@ export default function Sphere() {
   const [radiusSize, setRadiusSize] = useState(180);
 
   useEffect(() => {
-    function handleRezise() {
+    function handleResize() {
       window.innerWidth < 720 ? setRadiusSize(180) : setRadiusSize(300);
     }
     
     console.log(radiusSize);
-    handleRezise();
+    handleResize();
 
-    window.addEventListener('resize', handleRezise);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleRezise);
+      window.removeEventListener('resize', handleResize);
     };
   }, [radiusSize]);
 
@@ -63,7 +63,8 @@ export default function Sphere() {
 
   return (
       <div className="containerSphere">
-        <span ref={tagCloudRef}></span>
+        <span ref={tagCloudRef}> </span>
+       
       </div>
   )
 }

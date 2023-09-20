@@ -31,7 +31,7 @@ export function Footer() {
   return (
     <>
       <div id='footer' className="footer">
-        <div className='portfolio-title footer-container'>
+        <div className='box-connect'>
           <span className='port_open'>&lt;h2&gt;</span>
           <h2 className='portfolio-title-inside footer-title'>Connect with me</h2>
           <span className='footer_h2_close'>&lt;/h2&gt;</span>

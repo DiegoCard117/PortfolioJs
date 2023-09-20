@@ -24,10 +24,6 @@
   top: 20px;
 }
 
-.footer_h2_close {
-  left: 160px;
-}
-
 .input_close {
   left: 85%;
   top: 5px;
@@ -86,7 +82,6 @@
   color: white;
 
   margin: 0 auto;
-
 }
 
 .submit_open,
@@ -105,6 +100,23 @@
 
 .input_close {
   position: relative;
+}
+
+.box-connect {
+  display: flex;
+  flex-direction: column;
+  width: 205px;
+  align-self: start;
+  margin: 10px 11%;
+}
+
+.footer_h2_close {
+  display: flex;
+  align-self: flex-end;
+}
+
+.footer-title {
+  padding-left: 10px;
 }
 
 @media screen and (min-width: 1280px) {
