@@ -45,7 +45,8 @@ export default function Sphere() {
       'Prisma',
       'Zod',
       'Expo',
-      'Vite', ''
+      'Vite',
+      'Y'
     ];
 
     const options = {
