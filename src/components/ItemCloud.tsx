@@ -1,15 +1,13 @@
 import React from 'react';
 import { Cloud, renderSimpleIcon, fetchSimpleIcons, SimpleIcon } from 'react-icon-cloud';
+import '../assets/css/sphere.scss'
 
-
-// Defina uma interface para a estrutura de dados retornada por fetchSimpleIcons
 interface IconsData {
   simpleIcons: Record<string, SimpleIcon>;
   allIcon: Record<string, { title: string; hex: string; slug: string; }>;
 }
 
 const useIcons = (slugs: string[]) => {
-  // Defina o estado inicial com o tipo adequado (IconsData)
   const [icons, setIcons] = React.useState<IconsData | undefined>(undefined);
 
   React.useEffect(() => {

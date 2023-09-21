@@ -39,6 +39,7 @@ export function AboutMe() {
             <span className='port_p_close'>&lt;/p&gt;</span>
           </div>
           <DynamicIconCloud/>
+          
         </div>
         <div className='social-bottom'>
           <a href="https://github.com/DiegoCard117" target='_blank' rel="noreferrer"><img src={github} alt="github icon" /></a>
