@@ -3,6 +3,7 @@ import linkedin from '../assets/img/linkedin.svg';
 import instagram from '../assets/img/instagram.svg';
 import Sphere from '../components/Sphere';
 import React from 'react';
+import DynamicIconCloud from '../components/ItemCloud';
 
 export function AboutMe() {
   return (
@@ -37,7 +38,7 @@ export function AboutMe() {
             <p>Em resumo, sou um Dev Frontend dedicado, cuja paixão pela tecnologia e design me torna uma força motriz na criação de experiências web excepcionais</p>
             <span className='port_p_close'>&lt;/p&gt;</span>
           </div>
-          <Sphere />
+          <DynamicIconCloud/>
         </div>
         <div className='social-bottom'>
           <a href="https://github.com/DiegoCard117" target='_blank' rel="noreferrer"><img src={github} alt="github icon" /></a>
