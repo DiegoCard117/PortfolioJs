@@ -19,15 +19,19 @@
   top: -25px;
 }
 
-.center_home>h1 {
-  font-size: 48px;
-  font-weight: 400;
+.center_home {
+  h1 {
+    font-size: 48px;
+    font-weight: 400;
+  }
 }
 
-.center_home>span {
-  display: block;
-  position: relative;
-  font-size: 20px;
+.center_home {
+  span {
+    display: block;
+    position: relative;
+    font-size: 20px;
+  }
 }
 
 .html_span {
@@ -53,7 +57,7 @@
   bottom: 100px;
   background: #725EF2;
   width: 338px;
-  height: 53px;
+  height: 54px;
 
   display: flex;
   align-items: center;

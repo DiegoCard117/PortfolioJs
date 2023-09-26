@@ -25,7 +25,7 @@ export function Design() {
             interactivity: {
                 events: {
                     onClick: {
-                        enable: true,
+                        enable: false,
                         mode: "push",
                     },
                     onHover: {
@@ -75,7 +75,7 @@ export function Design() {
                         enable: true,
                         area: 800,
                     },
-                    value: 20,
+                    value: 40,
                 },
                 opacity: {
                     value: 0.2,
