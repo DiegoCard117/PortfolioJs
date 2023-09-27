@@ -1,6 +1,7 @@
 
 .container_portfolio {
   min-height: 1150px;
+  overflow: hidden;
 
   .content_portfolio {
     position: relative;
@@ -9,6 +10,7 @@
     flex-direction: column;
     align-items: start;
     height: 600px;
+   
 
     .portfolio-title {
       padding-bottom: 40px;

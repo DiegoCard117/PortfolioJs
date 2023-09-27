@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react"
+import { motion } from "framer-motion"
 import github from '../assets/img/github.svg';
 import linkedin from '../assets/img/linkedin.svg';
 import instagram from '../assets/img/instagram.svg';
@@ -12,6 +13,25 @@ import { Menu } from '../components/Menu';
 
 export function Home() {
 
+  const line1 = "Hello!"
+  const line2 = "I'm Diego"
+  const line3 = "Dev Frontend"
+
+  const sentence = {
+    hidden: {opacity: 1},
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.5,
+        staggerChildren: 0.10
+      }
+    }
+  }
+
+  const letter = {
+    hidden: {opacity: 0, x: -50},
+    visible: {opacity: 1, x: 0}
+  }
   return (
     <>
       <Menu />
@@ -22,17 +42,48 @@ export function Home() {
         <a href="#footer">Contact Me</a>
       </div>
       <div className="container_home" id='home'>
-        <div className='center_home'>
+        <motion.div
+          variants={{
+            hidden: {opacity: 0, x: -25},
+            visible: {opacity: 1, x: 0}
+          }}
+          initial="hidden"
+          animate="visible"
+          transition={{duration: 0.5, delay: 0.25}}
+          className='center_home'>
           <span className='html_span'>&lt;html&gt;</span>
           <span className='body_span'>&lt;body&gt;</span>
           <span className='h1_span'>&lt;h1&gt;</span>
-          <h1 id='title-type-writter'>
-            Hello! <br />
-            I&apos;m Diego <br />
-            Dev Frotend
-          </h1>
+          <motion.div
+            variants={sentence}
+            initial="hidden"
+            animate="visible"
+            className='title-type-writter'>
+            {line1.split("").map((char, index) => {
+              return (
+                <motion.h1 className={char} key={char + "-" + index} variants={letter}>
+                  {char}
+                </motion.h1>
+              )
+            })}
+            <br />
+            {line2.split("").map((char, index) => {
+              return (
+                <motion.h1 className={'a' + index} key={char + "-" + index} variants={letter}>
+                  {char} 
+                </motion.h1>
+              )
+            })} <br />
+            {line3.split("").map((char, index) => {
+              return (
+                <motion.h1 className={index + 'b'} key={char + "-" + index} variants={letter}>
+                  {char}
+                </motion.h1>
+              )
+            })}
+          </motion.div>
           <span className='h1_close_span'>&lt;/h1&gt;</span>
-        </div>
+        </motion.div>
         <div className='img-home'>
           <img src={note} alt="" />
         </div>

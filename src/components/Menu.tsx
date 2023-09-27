@@ -15,7 +15,6 @@ export function Menu() {
   const updateMenu = () => {
     !isMenuClicked ? setMenuClass("menu open") : setMenuClass("menu close");
     setIsMenuClicked(!isMenuClicked);
-    isMenuClicked ? document.body.style.overflow = 'auto' : document.body.style.overflow = 'hidden';
   };
 
   return (

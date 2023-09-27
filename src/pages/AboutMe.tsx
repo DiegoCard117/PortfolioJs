@@ -2,13 +2,36 @@ import github from '../assets/img/github.svg';
 import linkedin from '../assets/img/linkedin.svg';
 import instagram from '../assets/img/instagram.svg';
 import Sphere from '../components/Sphere';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import DynamicIconCloud from '../components/ItemCloud';
+import { motion, useAnimation, useInView } from 'framer-motion';
 
 export function AboutMe() {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
+
   return (
     <>
-      <div id='about' className="container-about">
+      <motion.div
+        ref={ref}
+        variants={{
+          hidden: { opacity: 0, x: -25 },
+          visible: { opacity: 1, x: 0 }
+        }}
+        initial="hidden"
+        animate={mainControls}
+        transition={{ duration: 0.5, delay: 0.25 }}
+        id='about'
+        className="container-about">
         <div className='about-title'>
           <span className='port_open'>&lt;h2&gt;</span>
           <h2 className='about-title-inside'>About Me</h2>
@@ -38,15 +61,15 @@ export function AboutMe() {
             <p>Em resumo, sou um Dev Frontend dedicado, cuja paixão pela tecnologia e design me torna uma força motriz na criação de experiências web excepcionais</p>
             <span className='port_p_close'>&lt;/p&gt;</span>
           </div>
-          <DynamicIconCloud/>
-          
+          <DynamicIconCloud />
+
         </div>
         <div className='social-bottom'>
           <a href="https://github.com/DiegoCard117" target='_blank' rel="noreferrer"><img src={github} alt="github icon" /></a>
           <a href="https://www.linkedin.com/in/diego-cardoso-534559203/" target='_blank' rel="noreferrer"><img src={linkedin} alt="linkedin icon" /></a>
           <a href="https://www.instagram.com/dih_cardoso117/" target='_blank' rel="noreferrer"><img src={instagram} alt="insta icon" /></a>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

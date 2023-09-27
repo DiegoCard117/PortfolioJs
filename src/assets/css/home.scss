@@ -1,6 +1,6 @@
 
 .container_home {
-  min-height: 105vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,12 +17,17 @@
 .center_home {
   position: relative;
   top: -25px;
-}
+  display: flex;
+  flex-direction: column;
 
-.center_home {
   h1 {
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: 400;
+    display: inline-block;
+  }
+
+  .a4 {
+    margin-left: 15px;
   }
 }
 
@@ -47,8 +52,9 @@
 }
 
 .h1_close_span {
-  float: right;
-  left: 20px;
+  position: relative;
+  left: 90%;
+  width: 50px;
 }
 
 .bottom_home {
@@ -159,6 +165,10 @@
   .center_home {
     right: 30%;
     top: -10px;
+
+    h1 {
+      font-size: 64px;
+    }
   }
 
   .img-home {

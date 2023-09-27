@@ -1,14 +1,35 @@
 import pc from '../assets/img/Devices.gif';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { Carrosel } from '../components/Carrosel';
+import { useInView, useAnimation, motion } from 'framer-motion';
 
 export function Portfolio() {
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView]);
 
   return (
     <>
       <div id='works' className='container_portfolio'>
-        <div className="content_portfolio">
+        <motion.div
+          ref={ref}
+          variants={{
+            hidden: { opacity: 0, x: 15 },
+            visible: { opacity: 1, x: 0 }
+          }}
+          initial="hidden"
+          animate={mainControls}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="content_portfolio">
           <div className='portfolio-title'>
             <span className='port_open'>&lt;h2&gt;</span>
             <h2 className='portfolio-title-inside'>My Portfolio</h2>
@@ -27,7 +48,10 @@ export function Portfolio() {
             <div className='traço'></div>
             <div className='not_active'><a href="#footer">&#12644;</a></div>
           </div>
-          <div className='box-portfolio'>
+          <div
+
+            className='box-portfolio'
+          >
             <div>
               <span className='port_open'>&lt;p&gt;</span>
               <p>Bem-vindo ao meu portfólio!</p>
@@ -40,7 +64,7 @@ export function Portfolio() {
               <img src={pc} alt="" />
             </div>
           </div>
-        </div>
+        </motion.div>
         <Carrosel />
       </div>
     </>
