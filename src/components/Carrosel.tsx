@@ -60,7 +60,7 @@ export function Carrosel() {
               </div>
               <div className='carrousel-p'>
                 <span className='carrousel_p_open'>&lt;p&gt;</span>
-                <p>FrontEnd de um site de vendas Feito com NextJs</p>
+                <p>FrontEnd de um site de vendas Feito com NextJs. "Em Construção"</p>
                 <span className='carrousel_p_close'>&lt;/p&gt;</span>
               </div>
               <div className='navigation-carrousel'>
@@ -101,7 +101,7 @@ export function Carrosel() {
               </div>
               <div className='carrousel-p'>
                 <span className='carrousel_p_open'>&lt;p&gt;</span>
-                <p>Ecommerce feito em React Native</p>
+                <p>Ecommerce feito em React Native. "Em Construção"</p>
 
                 <span className='carrousel_p_close'>&lt;/p&gt;</span>
               </div>

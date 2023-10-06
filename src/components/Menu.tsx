@@ -7,7 +7,6 @@ import about from '../assets/img/about.svg';
 
 import React, { useState } from 'react';
 
-
 export function Menu() {
   const [menuClass, setMenuClass] = useState("menu close");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
