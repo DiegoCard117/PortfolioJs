@@ -1,126 +1,100 @@
-@media screen and (max-width: 1279px) {
-  .container-about {
-    margin-bottom: 20px;
+.container-about {
+  .about-inner {
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    gap: var(--sp-6);
+  }
 
-    .about-title {
-      padding-top: 50px;
-      display: flex;
-      flex-direction: column;
-      align-self: center;
-      width: 90%;
-      margin: 10px 0;
+  .about-title {
+    font-size: var(--fs-h2);
+    margin-bottom: var(--sp-3);
+  }
 
-      .about-title-inside {
-        font-size: 24px;
-        font-weight: normal;
-        padding: 0px 15px;
-      }
+  .about-p {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+    max-width: 60ch;
 
-      .about_h2_close {
-        position: relative;
-        left: 90px;
-        width: 50px;
-      }
-    }
-
-    .about-box {
-      display: flex;
-      flex-wrap: wrap;
-      width: calc(90% - 30px);
-      align-self: center;
-      justify-content: center;
-      align-items: center;
-
-      .about-p {
-        p {
-          padding-left: 15px;
-        }
-
-        .port_p_close {
-          position: relative;
-          right: -95%;
-        }
-      }
-    }
-
-    .social-bottom {
-      display: flex;
-      align-items: center;
-      width: 80%;
-      border-radius: 5px;
-      justify-content: space-around;
-      align-self: center;
-      background: #725EF2;
+    p {
+      color: var(--text-muted);
+      line-height: 1.7;
     }
   }
 
+  .social-bottom {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--sp-3);
+    width: fit-content;
+    margin-top: var(--sp-4);
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+
+    img {
+      width: 20px;
+      opacity: 0.75;
+      transition: opacity 0.2s ease;
+    }
+
+    a:hover img {
+      opacity: 1;
+    }
+  }
+
+  .about-skills {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+  }
+
+  .skills-label {
+    font-family: var(--font-mono);
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+  }
+
+  .skill-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .skill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+
+    svg {
+      color: var(--accent);
+      font-size: 1rem;
+    }
+  }
 }
 
-@media screen and (min-width: 1280px) {
-  .container-about {
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+@media screen and (min-width: 900px) {
+  .container-about .about-inner {
+    flex-direction: row;
+    align-items: flex-start;
 
-    .about-title {
-      padding-top: 50px;
-      display: flex;
-      flex-direction: column;
-      align-self: center;
-      width: 78%;
-      margin: 10px 0;
-
-      .about-title-inside {
-        font-size: 64px;
-        font-weight: normal;
-        padding: 0px 15px;
-      }
-
-      .about_h2_close {
-        position: relative;
-        left: 280px;
-        width: 50px;
-      }
+    .about-main {
+      flex: 1 1 55%;
     }
 
-    .about-box {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 90%;
-      align-self: center;
-      justify-content: space-around;
-      align-items: center;
-      margin-bottom: 50px;
-
-      .about-p {
-        width: 45%;
-
-        p {
-          padding-left: 15px;
-          font-size: 24px;
-        }
-
-        .port_p_close {
-          position: relative;
-          left: 95%;
-        }
-      }
-    }
-
-    .social-bottom {
-      display: flex;
-      align-items: center;
-      width: 30%;
-      border-radius: 5px;
-      justify-content: space-around;
-      align-self: center;
-      background: #725EF2;
+    .about-skills {
+      flex: 1 1 40%;
+      position: sticky;
+      top: var(--sp-6);
     }
   }
-
 }

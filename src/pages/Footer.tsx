@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 
 import emailjs from '@emailjs/browser';
+import { useLanguage } from '../i18n/LanguageContext';
 
 export function Footer() {
-  const [email, setEmail] = useState<string>();
-  const [message, setMessage] = useState<string>();
+  const { t } = useLanguage();
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
+  const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle');
 
   function sendEmail(e: { preventDefault: () => void; }) {
     e.preventDefault();
 
     if (email === '' || message === '') {
-      alert("Preencha todos os campos");
+      alert(t.footer.fillFieldsAlert);
       return;
     }
+
+    setStatus('sending');
 
     const templateParams = {
       email: email,
@@ -24,63 +29,55 @@ export function Footer() {
       "template_q1d917c",
       templateParams,
       "VnsPHOsUeXYDnMl_d"
-      ).then((response) => {
-        console.log("enviado", response.status, response.text);
+      ).then(() => {
+        setStatus('sent');
         setEmail("");
         setMessage("");
-      }, (err) => {
-        console.log("erro", err);
+      }, () => {
+        setStatus('error');
       });
   }
 
   return (
-    <>
-      <div id='footer' className="footer">
-        <div className='box-connect'>
-          <span className='port_open'>&lt;h2&gt;</span>
-          <h2 className='footer-title'>Connect with me</h2>
-          <span className='footer-h2-close'>&lt;/h2&gt;</span>
-        </div>
-        <div className='navigation nav-footer'>
-          <div className='not_active'><a href="#home">&#12644;</a></div>
+    <div id='footer' className="section footer">
+      <div className='section-inner footer-inner'>
+        <div className='footer-main'>
+          <span className='eyebrow'>{t.footer.eyebrow}</span>
+          <h2 className='footer-title'>{t.footer.title}</h2>
+          <p className='footer-intro'>{t.footer.intro}</p>
 
-          <div className='traço'></div>
-          <div className='not_active'><a href="#works">&#12644;</a></div>
-
-          <div className='traço'></div>
-          <div className='not_active'><a href="#about">&#12644;</a></div>
-
-          <div className='traço'></div>
-          <div className='active'><a href="#footer">&#12644;</a></div>
-        </div>
-        <div className='footer-container'>
-          <span className='port_open'>&lt;input&gt;</span>
-          <form onSubmit={sendEmail}>
+          <form className='footer-form' onSubmit={sendEmail}>
             <input
-              type="text"
+              type="email"
               id="email"
-              placeholder='Email'
+              name="email"
+              placeholder={t.footer.emailPlaceholder}
+              aria-label={t.footer.emailPlaceholder}
+              required
               onChange={(e) => setEmail(e.target.value)}
               value={email}
             />
 
-            <input
-              type="text"
+            <textarea
               id="msg"
-              placeholder='Message'
+              name="message"
+              placeholder={t.footer.messagePlaceholder}
+              aria-label={t.footer.messagePlaceholder}
+              rows={4}
+              required
               onChange={(e) => setMessage(e.target.value)}
               value={message}
             />
 
-            <span className='input-close'>&lt;/input&gt;</span>
-            <div className='btn-submit'>
-              <span className='submit-open'>&lt;button&gt;</span>
-              <input type="submit" className='contact-btn' value="Contact Me" />
-              <span className='submit-close'>&lt;/button&gt;</span>
-            </div>
+            <button type='submit' className='contact-btn' disabled={status === 'sending'}>
+              {status === 'sending' ? t.footer.sending : t.footer.send}
+            </button>
+
+            {status === 'sent' && <p className='form-status form-status-ok'>{t.footer.sentMessage}</p>}
+            {status === 'error' && <p className='form-status form-status-error'>{t.footer.errorMessage}</p>}
           </form>
         </div>
       </div>
-    </>
+    </div>
   );
 }

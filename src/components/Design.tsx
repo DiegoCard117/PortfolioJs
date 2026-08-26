@@ -6,21 +6,21 @@ import type { Container, Engine } from "tsparticles-engine";
 
 export function Design() {
     const particlesInit = useCallback(async (engine: Engine) => {
-        console.log(engine);
         await loadFull(engine);
     }, []);
 
-    const particlesLoaded = useCallback(async (container: Container | undefined) => {
-        await console.log(container);
-    }, []);
+    const particlesLoaded = useCallback(async (_container: Container | undefined) => {}, []);
 
   return (
-    <>
+    <div className="home-particles" aria-hidden="true">
       <Particles
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
+            fullScreen: {
+                enable: false,
+            },
             fpsLimit: 120,
             interactivity: {
                 events: {
@@ -51,13 +51,13 @@ export function Design() {
             },
             particles: {
                 color: {
-                    value: "#ffffff",
+                    value: "#34d399",
                 },
                 links: {
-                    color: "#ffffff",
+                    color: "#34d399",
                     distance: 150,
                     enable: true,
-                    opacity: 0.5,
+                    opacity: 0.25,
                     width: 1,
                 },
                 move: {
@@ -90,6 +90,6 @@ export function Design() {
             detectRetina: true,
         }}
       />
-    </>
+    </div>
   )
 }

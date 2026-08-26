@@ -1,123 +1,114 @@
-import React from "react"
+import React, { Suspense, lazy } from "react"
 import { motion } from "framer-motion"
 import github from '../assets/img/github.svg';
 import linkedin from '../assets/img/linkedin.svg';
 import instagram from '../assets/img/instagram.svg';
 
-import note from '../assets/img/img-home.svg';
-
-import arrow from '../assets/img/arrow_responsive.svg';
-
 import { Menu } from '../components/Menu';
+import { useLanguage } from '../i18n/LanguageContext';
 
+const Design = lazy(() => import('../components/Design').then((m) => ({ default: m.Design })));
 
 export function Home() {
+  const { t } = useLanguage();
 
-  const line1 = "Hello!"
-  const line2 = "I'm Diego"
-  const line3 = "Dev Frontend"
+  const words = ["Diego", "Cardoso"]
 
   const sentence = {
-    hidden: {opacity: 1},
+    hidden: { opacity: 1 },
     visible: {
       opacity: 1,
       transition: {
-        delay: 0.5,
-        staggerChildren: 0.10
+        delay: 0.3,
+        staggerChildren: 0.035
       }
     }
   }
 
   const letter = {
-    hidden: {opacity: 0, x: -50},
-    visible: {opacity: 1, x: 0}
+    hidden: { opacity: 0, y: 16 },
+    visible: { opacity: 1, y: 0 }
   }
+
   return (
     <>
       <Menu />
       <div className='menu-desktop'>
-        <a href="#home">Home</a>
-        <a href="#works">Works</a>
-        <a href="#about">About Me</a>
-        <a href="#footer">Contact Me</a>
+        <a href="#home">{t.nav.home}</a>
+        <a href="#works">{t.nav.works}</a>
+        <a href="#blog">{t.nav.blog}</a>
+        <a href="#about">{t.nav.about}</a>
+        <a href="#footer">{t.nav.contact}</a>
       </div>
-      <div className="container_home" id='home'>
-        <motion.div
-          variants={{
-            hidden: {opacity: 0, x: -25},
-            visible: {opacity: 1, x: 0}
-          }}
-          initial="hidden"
-          animate="visible"
-          transition={{duration: 0.5, delay: 0.25}}
-          className='center_home'>
-          <span className='html_span'>&lt;html&gt;</span>
-          <span className='body_span'>&lt;body&gt;</span>
-          <span className='h1_span'>&lt;h1&gt;</span>
-          <motion.div
-            variants={sentence}
-            initial="hidden"
-            animate="visible"
-            className='title-type-writter'>
-            {line1.split("").map((char, index) => {
-              return (
-                <motion.h1 className={char} key={char + "-" + index} variants={letter}>
-                  {char}
-                </motion.h1>
-              )
-            })}
-            <br />
-            {line2.split("").map((char, index) => {
-              return (
-                <motion.h1 className={'a' + index} key={char + "-" + index} variants={letter}>
-                  {char} 
-                </motion.h1>
-              )
-            })} <br />
-            {line3.split("").map((char, index) => {
-              return (
-                <motion.h1 className={index + 'b'} key={char + "-" + index} variants={letter}>
-                  {char}
-                </motion.h1>
-              )
-            })}
-          </motion.div>
-          <span className='h1_close_span'>&lt;/h1&gt;</span>
-        </motion.div>
-        <div className='img-home'>
-          <img src={note} alt="" />
-        </div>
-        <div className='navigation'>
-          <div className='active'><a href="#home">&#12644;</a></div>
+      <div className="section container_home" id='home'>
+        <Suspense fallback={null}>
+          <Design />
+        </Suspense>
+        <div className='section-inner home-inner'>
+          <div className='home-content'>
+            <motion.div
+              variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}
+              initial="hidden"
+              animate="visible"
+              transition={{ duration: 0.4 }}
+              className='eyebrow'
+            >
+              {t.hero.eyebrow}
+            </motion.div>
 
-          <div className='traço'></div>
-          <div className='not_active'><a href="#works">&#12644;</a></div>
+            <motion.h1
+              variants={sentence}
+              initial="hidden"
+              animate="visible"
+              className='home-name'
+              aria-label={words.join(" ")}
+            >
+              {words.map((word) => (
+                <span className='home-name-word' key={word} aria-hidden="true">
+                  {word.split("").map((char, index) => (
+                    <motion.span
+                      className='home-name-letter'
+                      key={word + char + index}
+                      variants={letter}
+                    >
+                      {char}
+                    </motion.span>
+                  ))}
+                </span>
+              ))}
+            </motion.h1>
 
-          <div className='traço'></div>
-          <div className='not_active'><a href="#about">&#12644;</a></div>
+            <motion.p
+              className='home-tagline'
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1 }}
+            >
+              {t.hero.tagline} <span className='home-tagline-sep'>·</span> {t.hero.taglineSep}
+            </motion.p>
 
-          <div className='traço'></div>
-          <div className='not_active'><a href="#footer">&#12644;</a></div>
-        </div>
-        <div className='bottom_home'>
-          <a href="https://github.com/DiegoCard117" target='_blank' rel="noreferrer"><img src={github} alt="github icon" /></a>
-          <a href="https://www.linkedin.com/in/diego-cardoso-534559203/" target='_blank' rel="noreferrer"><img src={linkedin} alt="linkedin icon" /></a>
-          <a href="https://www.instagram.com/dih_cardoso117/" target='_blank' rel="noreferrer"><img src={instagram} alt="insta icon" /></a>
-        </div>
-        <div className="arrow">
-          <span className='span_scroll_arrow'>Scroll</span>
-          <img src={arrow} alt="" />
-        </div>
-        <div className='contactme-home'>
-          <div className='btn-contact-home'>
-            <span className='span-home-btn'>&lt;button&gt;</span>
-            <a href="#footer">Contact Me</a>
-            <span className='span-home-btn-close'>&lt;/button&gt;</span>
+            <motion.div
+              className='home-actions'
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 1.25 }}
+            >
+              <a className='home-cta' href="#footer">{t.hero.cta}</a>
+              <a className='home-resume-cta' href={t.hero.resumeFile} target='_blank' rel='noreferrer'>{t.hero.resumeCta}</a>
+              <div className='home-social'>
+                <a href="https://github.com/DiegoCard117" target='_blank' rel="noreferrer" aria-label="GitHub de Diego Cardoso"><img src={github} alt="GitHub" /></a>
+                <a href="https://www.linkedin.com/in/diego-cardoso-534559203/" target='_blank' rel="noreferrer" aria-label="LinkedIn de Diego Cardoso"><img src={linkedin} alt="LinkedIn" /></a>
+                <a href="https://www.instagram.com/dih_cardoso117/" target='_blank' rel="noreferrer" aria-label="Instagram de Diego Cardoso"><img src={instagram} alt="Instagram" /></a>
+              </div>
+            </motion.div>
           </div>
+        </div>
+
+        <div className="scroll-cue">
+          <span>{t.hero.scroll}</span>
+          <div className='scroll-cue-line' />
         </div>
       </div>
     </>
   );
 }
-
-
