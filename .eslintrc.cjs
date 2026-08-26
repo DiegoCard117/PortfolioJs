@@ -17,4 +17,10 @@ module.exports = {
       { allowConstantExport: true },
     ],
   },
+  overrides: [
+    {
+      files: ['api/**/*.js'],
+      env: { node: true, browser: false },
+    },
+  ],
 }

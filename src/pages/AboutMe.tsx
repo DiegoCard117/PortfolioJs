@@ -4,6 +4,7 @@ import instagram from '../assets/img/instagram.svg';
 import React, { useEffect, useRef } from 'react';
 import { SkillGrid } from '../components/SkillGrid';
 import { GithubStats } from '../components/GithubStats';
+import { NowPlaying } from '../components/NowPlaying';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useLanguage } from '../i18n/LanguageContext';
 
@@ -55,6 +56,7 @@ export function AboutMe() {
           <span className='skills-label'>{t.about.skillsLabel}</span>
           <SkillGrid />
           <GithubStats />
+          <NowPlaying />
         </div>
       </div>
     </motion.div>

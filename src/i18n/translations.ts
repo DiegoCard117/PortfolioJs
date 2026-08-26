@@ -48,6 +48,11 @@ export interface Translations {
     loading: string;
     error: string;
   };
+  nowPlaying: {
+    loading: string;
+    playingNow: string;
+    lastPlayed: string;
+  };
   blog: {
     eyebrow: string;
     title: string;
@@ -132,6 +137,11 @@ export const translations: Record<Language, Translations> = {
       loading: 'Carregando…',
       error: 'Não consegui carregar agora.',
     },
+    nowPlaying: {
+      loading: 'Carregando…',
+      playingNow: 'Ouvindo agora',
+      lastPlayed: 'Ouvi por último',
+    },
     blog: {
       eyebrow: 'Blog',
       title: 'O que eu escrevo',
@@ -213,6 +223,11 @@ export const translations: Record<Language, Translations> = {
       viewProfile: 'View full profile ↗',
       loading: 'Loading…',
       error: "Couldn't load this right now.",
+    },
+    nowPlaying: {
+      loading: 'Loading…',
+      playingNow: 'Now playing',
+      lastPlayed: 'Last played',
     },
     blog: {
       eyebrow: 'Blog',

@@ -35,6 +35,7 @@ Abre em `http://localhost:5173` (ou a próxima porta livre).
 ## Estrutura
 
 ```
+api/             funções serverless da Vercel (ex: now-playing.js)
 src/
   assets/css/    estilos Sass (um arquivo por seção/página)
   assets/img/    ícones e imagens
@@ -42,6 +43,25 @@ src/
   i18n/          contexto de idioma e dicionário de traduções PT/EN
   pages/         seções da página (Home, Portfolio, Blog, AboutMe, Footer)
 ```
+
+## Widget "ouvindo agora" (Spotify)
+
+O card na seção Sobre Mim mostra a música atual (ou a última tocada) via uma função
+serverless (`api/now-playing.js`) que guarda as credenciais no servidor — nunca no
+navegador. Pra configurar:
+
+1. Crie um app em [developer.spotify.com/dashboard](https://developer.spotify.com/dashboard)
+   e anote o **Client ID** e o **Client Secret**.
+2. Adicione uma Redirect URI no app (pode ser `https://portfolio-js-psi.vercel.app`, só
+   precisa existir pra completar o passo 3).
+3. Gere um **refresh token** uma única vez, autorizando o app com os escopos
+   `user-read-currently-playing user-read-recently-played`, e trocando o `code` retornado
+   por um token via `POST https://accounts.spotify.com/api/token` (grant_type
+   `authorization_code`).
+4. No projeto da Vercel, em Settings → Environment Variables, adicione:
+   `SPOTIFY_CLIENT_ID`, `SPOTIFY_CLIENT_SECRET`, `SPOTIFY_REFRESH_TOKEN` (veja `.env.example`).
+5. Redeploy. Sem essas variáveis configuradas, o card simplesmente não aparece — não
+   quebra o resto do site.
 
 ## Deploy
 
