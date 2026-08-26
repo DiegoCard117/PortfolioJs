@@ -3,6 +3,7 @@ import linkedin from '../assets/img/linkedin.svg';
 import instagram from '../assets/img/instagram.svg';
 import React, { useEffect, useRef } from 'react';
 import { SkillGrid } from '../components/SkillGrid';
+import { GithubStats } from '../components/GithubStats';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { useLanguage } from '../i18n/LanguageContext';
 
@@ -53,6 +54,7 @@ export function AboutMe() {
         <div className='about-skills'>
           <span className='skills-label'>{t.about.skillsLabel}</span>
           <SkillGrid />
+          <GithubStats />
         </div>
       </div>
     </motion.div>

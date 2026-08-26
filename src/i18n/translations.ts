@@ -39,6 +39,15 @@ export interface Translations {
     paragraphs: string[];
     skillsLabel: string;
   };
+  github: {
+    label: string;
+    repos: string;
+    followers: string;
+    since: string;
+    viewProfile: string;
+    loading: string;
+    error: string;
+  };
   blog: {
     eyebrow: string;
     title: string;
@@ -114,6 +123,15 @@ export const translations: Record<Language, Translations> = {
       ],
       skillsLabel: 'Stack & ferramentas',
     },
+    github: {
+      label: 'GitHub',
+      repos: 'repositórios públicos',
+      followers: 'seguidores',
+      since: 'desde',
+      viewProfile: 'Ver perfil completo ↗',
+      loading: 'Carregando…',
+      error: 'Não consegui carregar agora.',
+    },
     blog: {
       eyebrow: 'Blog',
       title: 'O que eu escrevo',
@@ -186,6 +204,15 @@ export const translations: Record<Language, Translations> = {
         "I like being involved in every layer of a project — from the interface to the server hosting it — and I keep looking to understand each part of the stack more deeply.",
       ],
       skillsLabel: 'Stack & tools',
+    },
+    github: {
+      label: 'GitHub',
+      repos: 'public repos',
+      followers: 'followers',
+      since: 'since',
+      viewProfile: 'View full profile ↗',
+      loading: 'Loading…',
+      error: "Couldn't load this right now.",
     },
     blog: {
       eyebrow: 'Blog',
