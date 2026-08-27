@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://portfolio-js-psi.vercel.app/sitemap.xml
+Sitemap: https://diego-cardoso.vercel.app/sitemap.xml

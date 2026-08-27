@@ -1,6 +1,6 @@
 # Diego Cardoso — Portfolio
 
-Site pessoal de [Diego Cardoso](https://portfolio-js-psi.vercel.app), desenvolvedor Full Stack com atuação em DevOps. Apresenta o [Balance](https://balanceinvest.app), um SaaS de rebalanceamento de investimentos, além de posts técnicos publicados no [dev.to](https://dev.to/diegocard117).
+Site pessoal de [Diego Cardoso](https://diego-cardoso.vercel.app), desenvolvedor Full Stack com atuação em DevOps. Apresenta o [Balance](https://balanceinvest.app), um SaaS de rebalanceamento de investimentos, além de posts técnicos publicados no [dev.to](https://dev.to/diegocard117).
 
 ## Stack
 
@@ -52,7 +52,7 @@ navegador. Pra configurar:
 
 1. Crie um app em [developer.spotify.com/dashboard](https://developer.spotify.com/dashboard)
    e anote o **Client ID** e o **Client Secret**.
-2. Adicione uma Redirect URI no app (pode ser `https://portfolio-js-psi.vercel.app`, só
+2. Adicione uma Redirect URI no app (pode ser `https://diego-cardoso.vercel.app`, só
    precisa existir pra completar o passo 3).
 3. Gere um **refresh token** uma única vez, autorizando o app com os escopos
    `user-read-currently-playing user-read-recently-played`, e trocando o `code` retornado
