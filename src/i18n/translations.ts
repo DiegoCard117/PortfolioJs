@@ -32,6 +32,17 @@ export interface Translations {
       cta: string;
       alt: string;
     };
+    partiu: {
+      eyebrowLabel: string;
+      tagline: string;
+      paragraph1: string;
+      paragraph2: string;
+      features: string[];
+      visit: string;
+      cta: string;
+      alt: string;
+      playStore: string;
+    };
   };
   about: {
     eyebrow: string;
@@ -98,9 +109,9 @@ export const translations: Record<Language, Translations> = {
     portfolio: {
       eyebrow: 'Portfólio',
       title: 'Meu portfólio',
-      intro: 'Hoje meu portfólio tem um projeto central: o Balance, um SaaS de rebalanceamento de investimentos que construí sozinho, do backend ao deploy em produção.',
+      intro: 'Hoje meu portfólio tem dois projetos centrais: o Partiuu!, um planejador de viagem, e o Balance, um SaaS de rebalanceamento de investimentos (atualmente pausado) — os dois construí sozinho, do backend ao deploy em produção.',
       balance: {
-        eyebrowLabel: 'Projeto em destaque',
+        eyebrowLabel: 'Projeto pausado',
         tagline: 'Rebalanceamento de investimentos multi-mercado — Brasil, EUA e Cripto',
         paragraph1: 'O Balance organiza carteiras de ações brasileiras, ações americanas, renda fixa e criptomoedas em um só lugar, e calcula automaticamente quanto comprar de cada ativo a cada novo aporte para manter a alocação dentro da meta.',
         paragraph2: 'Busca cotações em tempo real (BRAPI, Yahoo Finance e Binance), acompanha CDI, Selic e IPCA via Banco Central, e gera relatórios de Imposto de Renda para o Brasil e de Capital Gains (Schedule D) para carteiras americanas.',
@@ -114,6 +125,23 @@ export const translations: Record<Language, Translations> = {
         visit: 'balanceinvest.app ↗',
         cta: 'Acessar o Balance',
         alt: 'Painel do Balance mostrando carteiras, alocação consolidada e saúde das metas por categoria',
+      },
+      partiu: {
+        eyebrowLabel: 'Projeto em destaque',
+        tagline: 'Planejador de viagem com roteiro, orçamento e acerto de contas',
+        paragraph1: 'O Partiuu! organiza o roteiro dia a dia de uma viagem — sozinho, a dois ou em grupo — com uma tela "Hoje" pensada para usar durante a viagem, checklist de mala e documentos guardados num só lugar.',
+        paragraph2: 'Calcula automaticamente o acerto de contas do grupo, mostra mapa e clima, e envia lembretes por notificação push. O app mobile é em React Native (Expo), com backend em Next.js, Supabase e login pelo Google.',
+        features: [
+          'Roteiro dia a dia com tela "Hoje" para usar durante a viagem',
+          'Orçamento com acerto de contas automático entre o grupo',
+          'Checklist de mala, documentos e mapa com rotas',
+          'App mobile em React Native (Expo) com lembretes por notificação push',
+          'Login com Google e lista de espera para quem ainda não entrou',
+        ],
+        visit: 'partiuu.app.br ↗',
+        cta: 'Acessar o Partiuu!',
+        alt: 'Tela de roteiro do Partiuu! mostrando os dias da viagem, atividades e voos',
+        playStore: 'Disponível no Google Play',
       },
     },
     about: {
@@ -185,9 +213,9 @@ export const translations: Record<Language, Translations> = {
     portfolio: {
       eyebrow: 'Portfolio',
       title: 'My portfolio',
-      intro: "Right now my portfolio has one central project: Balance, an investment-rebalancing SaaS I built solo, from the backend to the production deploy.",
+      intro: "Right now my portfolio has two central projects: Partiuu!, a trip planner, and Balance, an investment-rebalancing SaaS (currently on hold) — both built solo, from the backend to the production deploy.",
       balance: {
-        eyebrowLabel: 'Featured project',
+        eyebrowLabel: 'Project on hold',
         tagline: 'Multi-market investment rebalancing — Brazil, US and Crypto',
         paragraph1: "Balance brings together Brazilian stocks, US stocks, fixed income and crypto in one place, and automatically calculates how much of each asset to buy on every new contribution to keep the allocation on target.",
         paragraph2: "It fetches real-time quotes (BRAPI, Yahoo Finance and Binance), tracks CDI, Selic and IPCA via Brazil's Central Bank, and generates income tax reports for Brazil and Capital Gains (Schedule D) reports for US portfolios.",
@@ -201,6 +229,23 @@ export const translations: Record<Language, Translations> = {
         visit: 'balanceinvest.app ↗',
         cta: 'Open Balance',
         alt: "Balance dashboard showing portfolios, consolidated allocation and goal health by category",
+      },
+      partiu: {
+        eyebrowLabel: 'Featured project',
+        tagline: 'Trip planner with itinerary, budget and expense splitting',
+        paragraph1: 'Partiuu! organizes a day-by-day trip itinerary — solo, as a couple or in a group — with a "Today" screen built for use during the trip, plus a packing checklist and documents in one place.',
+        paragraph2: "It automatically splits group expenses, shows a map and weather, and sends push notification reminders. The mobile app is built with React Native (Expo), with a Next.js backend, Supabase and Google sign-in.",
+        features: [
+          'Day-by-day itinerary with a "Today" screen for use during the trip',
+          'Budget with automatic group expense splitting',
+          'Packing checklist, documents and a map with routes',
+          'React Native (Expo) mobile app with push notification reminders',
+          'Google sign-in with a waitlist for new users',
+        ],
+        visit: 'partiuu.app.br ↗',
+        cta: 'Open Partiuu!',
+        alt: "Partiuu! itinerary screen showing trip days, activities and flights",
+        playStore: 'Get it on Google Play',
       },
     },
     about: {

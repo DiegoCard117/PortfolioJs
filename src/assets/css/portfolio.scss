@@ -15,8 +15,8 @@
   margin-bottom: var(--sp-4);
 }
 
-/* Balance — featured project spotlight */
-.balance-card {
+/* Project spotlight cards (Balance, Partiu, ...) */
+.project-card {
   display: flex;
   flex-direction: column;
   gap: var(--sp-4);
@@ -26,13 +26,27 @@
   border-radius: var(--radius-lg);
   padding: var(--sp-4);
 
-  .balance-media {
+  & + .project-card {
+    margin-top: var(--sp-4);
+  }
+
+  &.paused {
+    opacity: 0.75;
+
+    .project-eyebrow {
+      color: var(--text-muted);
+    }
+  }
+
+  .project-media {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
 
     img {
       width: 100%;
+      max-width: 360px;
       height: auto;
       display: block;
       border-radius: var(--radius-md);
@@ -40,7 +54,23 @@
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     }
 
-    .balance-visit {
+    &.gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      max-width: 420px;
+      width: 100%;
+
+      img {
+        max-width: none;
+      }
+
+      .project-visit {
+        grid-column: 1 / -1;
+      }
+    }
+
+    .project-visit {
       align-self: flex-start;
       font-family: var(--font-mono);
       font-size: var(--fs-small);
@@ -49,18 +79,18 @@
       opacity: 0.9;
     }
 
-    .balance-visit:hover {
+    .project-visit:hover {
       opacity: 1;
       text-decoration: underline;
     }
   }
 
-  .balance-info {
+  .project-info {
     display: flex;
     flex-direction: column;
     gap: 12px;
 
-    .balance-eyebrow {
+    .project-eyebrow {
       font-family: var(--font-mono);
       text-transform: uppercase;
       letter-spacing: 0.1em;
@@ -72,7 +102,7 @@
       font-size: var(--fs-h3);
     }
 
-    .balance-tagline {
+    .project-tagline {
       color: var(--text-muted);
       font-size: var(--fs-small);
       margin-top: -6px;
@@ -83,7 +113,7 @@
       line-height: 1.65;
     }
 
-    .balance-features {
+    .project-features {
       list-style: none;
       display: flex;
       flex-direction: column;
@@ -110,7 +140,7 @@
       }
     }
 
-    .balance-stack {
+    .project-stack {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
@@ -134,9 +164,15 @@
       }
     }
 
-    .balance-cta {
-      align-self: flex-start;
+    .project-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 14px;
       margin-top: 4px;
+    }
+
+    .project-cta {
       background: var(--accent);
       color: #04120c;
       font-weight: 500;
@@ -146,26 +182,48 @@
       transition: background 0.2s ease;
     }
 
-    .balance-cta:hover {
+    .project-store {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: var(--fs-small);
+      color: var(--text-muted);
+      text-decoration: none;
+
+      svg {
+        font-size: 1rem;
+      }
+    }
+
+    .project-store:hover {
+      color: var(--accent);
+    }
+
+    .project-cta:hover {
       background: var(--accent-strong);
     }
   }
 }
 
 @media screen and (min-width: 900px) {
-  .balance-card {
+  .project-card {
     flex-direction: row;
     align-items: stretch;
     padding: var(--sp-5);
     gap: var(--sp-5);
 
-    .balance-media {
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .project-media {
       flex: 1 1 46%;
       max-width: 46%;
       justify-content: center;
     }
 
-    .balance-info {
+    .project-info {
       flex: 1 1 54%;
       justify-content: center;
     }
